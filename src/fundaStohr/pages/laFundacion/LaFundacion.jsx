@@ -1,6 +1,6 @@
-import { Button } from "bootstrap";
+import Button from "react-bootstrap/Button";
 import React from "react";
 
 export const LaFundacion = () => {
-  return <Button>Hola mundo</Button>;
+  return <Button>La fundacion</Button>;
 };

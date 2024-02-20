@@ -3,7 +3,7 @@ import { Carousel, Container } from "react-bootstrap";
 
 const CarouselComponent = () => {
   return (
-    <Carousel style={{ paddingTop: "10vh", width: "100vh" }}>
+    <Carousel style={{ paddingTop: "15vh", width: "100vh" }}>
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"

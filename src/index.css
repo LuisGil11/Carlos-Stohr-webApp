@@ -1,11 +1,18 @@
 .navbarItem a {
-  font-weight: bold;
   font-family: sans-serif;
   color: black;
   position: relative;
 }
 
-.navbarItem a:hover::after {
+.navbarItem a:hover,
+.navbarItem a:active,
+.navbarItem a:focus {
+  color: white;
+}
+
+.navbarItem a:hover::after,
+.navbarItem a:active::after,
+.navbarItem a:focus::after {
   content: "";
   position: absolute;
   left: 0;
@@ -15,13 +22,22 @@
   background-color: white;
 }
 
-.navbarItem a:hover,
-.navbarItem a:active {
-  color: white;
-  position: relative;
-}
-
 .navbar {
   background-color: #2597f4;
   border-bottom: 2px solid black;
+}
+
+.carousel div {
+  border-radius: 5%;
+}
+
+.h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p {
+  font-family: sans-serif;
 }

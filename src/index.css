@@ -1,14 +1,14 @@
 .navbarItem a {
   font-family: sans-serif;
-  color: white;
+  color: #ffffff;
   position: relative;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .navbarItem a:hover,
 .navbarItem a:active,
 .navbarItem a:focus {
-  color: #e18335;
+  color: #032539;
 }
 
 .navbarItem a:hover::after,
@@ -20,11 +20,11 @@
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background-color: #e18335;
+  background-color: #032539;
 }
 
 .navbar {
-  background-color: #242582;
+  background-color: #0d85d8;
   border-bottom: 2px solid black;
 }
 

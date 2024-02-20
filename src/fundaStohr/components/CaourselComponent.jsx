@@ -3,11 +3,11 @@ import { Carousel, Container } from "react-bootstrap";
 
 const CarouselComponent = () => {
   return (
-    <Carousel style={{ paddingTop: "15vh", width: "100vh", height: "80vh" }}>
-      <Carousel.Item interval={1000}>
+    <Carousel style={{ paddingTop: "15vh", width: "80%" }}>
+      <Carousel.Item interval={5000}>
         <img
-          className="d-block w-100"
-          src="https://images.pexels.com/photos/333850/pexels-photo-333850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          className="d-block w-70"
+          src="assets/HomePage1.jpeg"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -15,10 +15,10 @@ const CarouselComponent = () => {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={5000}>
         <img
-          className="d-block w-100"
-          src="https://images.pexels.com/photos/1480688/pexels-photo-1480688.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          className="d-block w-70"
+          src="assets/HomePage2.jpeg"
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -26,27 +26,14 @@ const CarouselComponent = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={5000}>
         <img
-          className="d-block w-100"
-          src="https://images.pexels.com/photos/1480687/pexels-photo-1480687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          className="d-block w-70"
+          src="assets/HomePage3.jpeg"
           alt="Third slide"
         />
         <Carousel.Caption>
           <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://images.pexels.com/photos/1480689/pexels-photo-1480689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Fourth slide label</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>

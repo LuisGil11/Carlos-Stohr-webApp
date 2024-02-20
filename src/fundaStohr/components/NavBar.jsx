@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -12,7 +12,10 @@ export const NavBar = () => {
       expand="xl"
       fixed="top"
     >
-      <Container className="justify-content-between align-items-center">
+      <Container
+        className="justify-content-between align-items-center"
+        // style={{ height: "8.5vh" }}
+      >
         <Navbar.Brand href="/">
           <img
             src="assets/FCS_JPG-transformed.webp"

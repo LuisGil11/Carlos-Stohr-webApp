@@ -5,7 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 export const InicioPage = () => {
   return (
-    <div style={{ backgroundColor: "beige" }}>
+    <div style={{ backgroundColor: "white" }}>
       <Container className="d-flex justify-content-center">
         <CarouselComponent />
       </Container>
@@ -15,6 +15,7 @@ export const InicioPage = () => {
           backgroundColor: "#E18335",
           height: "70vh",
           marginTop: "8vh",
+          borderBottom: "2px solid black",
         }}
       >
         <Container className="d-flex align-items-center">
@@ -25,7 +26,7 @@ export const InicioPage = () => {
                   fontWeight: "bold",
                   fontStyle: "oblique",
                   color: "white",
-                  textShadow: "2px 1px 0 black",
+                  // textShadow: "2px 1px 0 black",
                   paddingBottom: "10px",
                   borderBottom: "3px solid white",
                 }}
@@ -37,7 +38,7 @@ export const InicioPage = () => {
                   fontStyle: "italic",
                   paddingTop: "3vh",
                   color: "white",
-                  textShadow: "2px 1px 0 black",
+                  // textShadow: "2px 1px 0 black",
                 }}
               >
                 Una Fundación para preservar el legado cultural del que fue

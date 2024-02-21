@@ -1,7 +1,9 @@
 import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/collapse";
+import { useLocation } from "react-router-dom";
 
 export const Sidebar = () => {
+  const location = useLocation();
   return (
     <div className="container-fluid">
       <div className="row vh-100">
@@ -11,7 +13,7 @@ export const Sidebar = () => {
         >
           <div style={{ paddingTop: "8rem" }}>
             <a
-              href=""
+              href="/"
               className="text-decoration-none ms-4 d-flex align-items-center text-white"
               role="button"
             >
@@ -25,12 +27,14 @@ export const Sidebar = () => {
             <hr className="text-white d-none d-sm-block" />
             <ul
               className="nav nav-pills flex-column flex-shrink-0"
-              id="parentM"
+              id="LaFundacion"
             >
-              <li className="nav-item text-white my-1">
+              <li className={`nav-item text-white my-1 `}>
                 <a
-                  href="#submenu"
-                  className="nav-link text-white"
+                  href="#LaFundacionSubmenu"
+                  className={`nav-link text-white ${
+                    location.pathname === "/la-fundacion" ? "active" : ""
+                  }`}
                   data-bs-toggle="collapse"
                   aria-current="page"
                 >
@@ -40,8 +44,8 @@ export const Sidebar = () => {
                 </a>
                 <ul
                   className="nav collapse ms-2 flex-column"
-                  id="submenu"
-                  data-bs-parent="#parentM"
+                  id="LaFundacionSubmenu"
+                  data-bs-parent="#LaFundacion"
                 >
                   <li className="nav-item text-white">
                     <a

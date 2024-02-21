@@ -1,12 +1,25 @@
 import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/collapse";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 
 export const Sidebar = () => {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
+  const navigateTo = (route, id) => {
+    console.log(id);
+    navigate(route);
+    setTimeout(() => {
+      const biografiaSection = document.getElementById(id);
+      console.log(biografiaSection);
+      if (biografiaSection) {
+        biografiaSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Delay for smoother scroll
+  };
   useEffect(() => {
     const handleScroll = () => {
       // Ajusta según la posición de scroll deseada
@@ -64,17 +77,19 @@ export const Sidebar = () => {
                   id="LaFundacionSubmenu"
                   data-bs-parent="#LaFundacion"
                 >
-                  <li className="nav-item text-white">
+                  <li className="nav-item text-white pt-3">
                     <a
                       className="nav-link text-white"
                       href="#"
                       aria-current="page"
+                      onClick={() => navigateTo("/la-fundacion", "Biografia")}
                     >
                       Bio Carlos Stohr
                     </a>
                   </li>
                   <li className="nav-item ">
                     <a
+                      onClick={() => navigateTo("/la-fundacion", "ArteYEstilo")}
                       className="nav-link text-white"
                       href="#"
                       aria-current="page"
@@ -84,6 +99,9 @@ export const Sidebar = () => {
                   </li>
                   <li className="nav-item text-white">
                     <a
+                      onClick={() =>
+                        navigateTo("/la-fundacion", "AlgunasObras")
+                      }
                       className="nav-link text-white"
                       href="#"
                       aria-current="page"
@@ -93,6 +111,7 @@ export const Sidebar = () => {
                   </li>
                   <li className="nav-item ">
                     <a
+                      onClick={() => navigateTo("/la-fundacion", "Libros")}
                       className="nav-link text-white"
                       href="#"
                       aria-current="page"
@@ -104,6 +123,7 @@ export const Sidebar = () => {
               </li>
               <li className="nav-item text-white my-1">
                 <a
+                  onClick={() => navigateTo("/la-fundacion", "Biografia")}
                   href="#submenu"
                   className="nav-link text-white"
                   data-bs-toggle="collapse"

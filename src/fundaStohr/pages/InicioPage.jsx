@@ -46,12 +46,14 @@ export const InicioPage = () => {
               <Col style={{ marginTop: "5rem" }}>
                 <a className="ps-2" href="https://www.facebook.com/fundastohr/">
                   <i
-                    className="fa-5x ps-4 bi bi-facebook"
-                    style={{ fontSize: "3rem" }}
+                    className="fa-5x ps-4 bi bi-facebook icon"
+                    style={{
+                      fontSize: "3rem",
+                    }}
                   ></i>
                 </a>
                 <a
-                  className="ps-2"
+                  className="ps-2 "
                   href="https://twitter.com/fundastohr?lang=es"
                 >
                   <i
@@ -60,7 +62,7 @@ export const InicioPage = () => {
                   ></i>
                 </a>
                 <a
-                  className="ps-2"
+                  className="ps-2 "
                   href="https://www.instagram.com/fundastohr/?hl=es"
                 >
                   <i
@@ -68,7 +70,7 @@ export const InicioPage = () => {
                     style={{ fontSize: "3rem" }}
                   ></i>
                 </a>
-                <a className="ps-2" href="fundacion.carlos.stohr@gmail.com">
+                <a className="ps-2 " href="fundacion.carlos.stohr@gmail.com">
                   <i
                     className=" ps-4 bi bi-envelope-fill"
                     style={{ fontSize: "3rem" }}

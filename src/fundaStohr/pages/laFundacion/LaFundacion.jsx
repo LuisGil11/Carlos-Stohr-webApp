@@ -23,7 +23,7 @@ const styles = {
 
 export const LaFundacion = () => {
   return (
-    <Row>
+    <Row id="SobreNosotros">
       <Col style={styles.col} sm={2}>
         <Sidebar />
       </Col>
@@ -33,7 +33,7 @@ export const LaFundacion = () => {
           <hr className="text-black d-none d-sm-block" style={styles.divider} />
           <Row>
             <Col style={styles.col} className="col-xl-6 col-lg-12">
-              <body style={styles.text}>
+              <p style={styles.text}>
                 La Fundación Carlos Stohr fue creada en Julio 2018. Está
                 conformada por sus hijos y amigos de la Isla de Margarita,
                 quienes compartieron con el artista a lo largo de su incursión
@@ -42,7 +42,7 @@ export const LaFundacion = () => {
                 este artista, cronista gráfico y amigo de la cultura venezolana.
                 Hacemos seguimiento al legado, a través de las siguientes
                 actividades:
-              </body>
+              </p>
               <ul style={styles.ul}>
                 <li style={styles.li}>Preservar y conservar sus obras.</li>
                 <li style={styles.li}>
@@ -69,12 +69,12 @@ export const LaFundacion = () => {
                   href="assets/quote.webp"
                   style={{ fontStyle: "italic" }}
                 >
-                  <quoute>
-                    "No acostumbro seguir cabalmente los principios del dibujo.
+                  <q>
+                    No acostumbro seguir cabalmente los principios del dibujo.
                     Pinto la realidad social de una época, lo que veo, aquello
                     que me da la oportunidad de plasmar un mensaje. Deseo ser
-                    claro en mis expresiones artísticas..."
-                  </quoute>
+                    claro en mis expresiones artísticas...
+                  </q>
                 </NavLink>
                 <h6
                   style={{
@@ -99,7 +99,7 @@ export const LaFundacion = () => {
             </Col>
           </Row>
           <Row style={{ marginTop: "6rem" }} className="d-flex">
-            <h1 className="text-end" style={styles.title}>
+            <h1 id="Biografia" className="text-end" style={styles.title}>
               Biografía de Carlos Stohr
             </h1>
             <hr
@@ -109,7 +109,7 @@ export const LaFundacion = () => {
             <Col style={styles.col}>
               <Row>
                 <Col style={styles.col}>
-                  <body className="LaFundacionBodys" style={styles.text}>
+                  <p className="LaFundacionBodys" style={styles.text}>
                     Karel Franšitek Stöhr Breuer nace en Praga, República Checa
                     el 29 de Septiembre de 1931, hijo de Franšitek Josef Stöhr y
                     Maria Breuer; hermano mayor de Tomáš Franšitek, todos de
@@ -120,7 +120,7 @@ export const LaFundacion = () => {
                     Cristóbal, Estado Tachira donde se gradúa de Bachiller en
                     1951. Traduce su nombre ante las autoridades venezolanas,
                     siendo conocido entonces como Carlos Francisco Stohr Breuer.
-                  </body>
+                  </p>
                 </Col>
                 <Col
                   style={styles.col}
@@ -134,17 +134,17 @@ export const LaFundacion = () => {
                 <Col style={styles.col}>
                   <h5 style={{ fontWeight: "bold" }}>Anecdota Curiosa:</h5>
                   <hr style={styles.divider} />
-                  <body style={styles.text}>
+                  <p style={styles.text}>
                     En 1952 conoce a Rafael “Fucho” Tovar trabajando en el Banco
                     Holandés, quien le recomienda vistar la isla de Margarita.
                     En 1953 llega por primera vez a la isla de Margarita, en un
                     viaje que realiza desde el Estado Sucre.
-                  </body>
+                  </p>
                 </Col>
               </Row>
               <Row>
                 <Col style={styles.col}>
-                  <body style={styles.text}>
+                  <p style={styles.text}>
                     Representa a Venezuela en los Panamericanos 1954 y gana
                     Medalla Plata en Saltos Ornamentales. En 1958 se casa con
                     Karen Fossing originaria de Dinamarca, con quien tuvo 4
@@ -153,14 +153,14 @@ export const LaFundacion = () => {
                     Universidad Central de Venezuela en 1959. En 1961 trabaja en
                     el Instituto Agrario Nacional Sector Oriente, donde conoce
                     los pueblos, cultura y personalidades de esta región.
-                  </body>
+                  </p>
                 </Col>
                 <Col style={styles.col}></Col>
               </Row>
               <Row>
                 <Col style={styles.col}></Col>
                 <Col style={styles.col}>
-                  <body style={styles.text}>
+                  <p style={styles.text}>
                     Entre los años 70 y 80 se vincula más de cerca con la
                     cultura margariteña y conoce a José Joaquín Salazar
                     "Cheguaco”, y realiza los dibujos sobre mitos y leyendas de
@@ -169,12 +169,12 @@ export const LaFundacion = () => {
                     González Ricones, donde diseñó varias Urbanizaciones en el
                     Este de Caracas como Sorocaima, La Tahona, Las Esmeraldas y
                     Las Granjerías.
-                  </body>
+                  </p>
                 </Col>
               </Row>
               <Row>
                 <Col style={styles.col}>
-                  <body style={styles.text}>
+                  <p style={styles.text}>
                     A los 75 años, se retira a la isla de Margarita donde
                     documenta todo su trabajo sobre las costumbres e historia de
                     la isla. Realiza aportes a la cultura Margariteña, recibe
@@ -182,7 +182,7 @@ export const LaFundacion = () => {
                     Gobernación, Alcaldías y grupos del medio del arte en el
                     estado Nueve Esparta. Muere el 24 de Diciembre del 2017 a
                     los 86 años en la ciudad de Caracas
-                  </body>
+                  </p>
                 </Col>
                 <Col
                   style={styles.col}
@@ -194,32 +194,38 @@ export const LaFundacion = () => {
             </Col>
           </Row>
           <Row>
-            <h1 style={styles.title}>Arte y Estilo</h1>
+            <h1 id="ArteYEstilo" style={styles.title}>
+              Arte y Estilo
+            </h1>
             <hr
               className="text-black d-none d-sm-block"
               style={styles.divider}
             />
             <Col style={styles.col}>
               <h3 style={{ fontWeight: "bold" }}>Técnica </h3>
-              <body style={styles.text}>
+              <p style={styles.text}>
                 Tinta china, grafito, plumilla, pinceles, acuarelas, sanguina
                 pasteles y con menos frecuencia el óleo. Su trabajo sobre papel
                 mayormente.
-              </body>
+              </p>
             </Col>
             <Col>
               <img src="assets/ArteYEstilo1.webp" alt="Arte y Estilo" />
               <img src="assets/ArteYEstilo2.webp" alt="Arte y Estilo" />
             </Col>
           </Row>
-          <h1 style={styles.title}>Algunas Obras</h1>
+          <h1 id="AlgunasObras" style={styles.title}>
+            Algunas Obras
+          </h1>
           <hr className="text-black d-none d-sm-block" style={styles.divider} />
-          <h1 style={styles.title}>Libros</h1>
+          <h1 id="Libros" style={styles.title}>
+            Libros
+          </h1>
           <hr className="text-black d-none d-sm-block" style={styles.divider} />
-          <body style={styles.text}>
+          <p style={styles.text}>
             {" "}
             Ilustró libros del escritor José Joaquín Salazar Franco “Cheguaco”
-          </body>
+          </p>
           <ul>
             <li style={styles.li}>
               1991. “NUESTRAS VIVIENCIAS MARGARITEÑAS” - crónica de los pueblos

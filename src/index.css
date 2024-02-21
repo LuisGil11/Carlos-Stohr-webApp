@@ -1,14 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .navbarItem a {
   font-family: sans-serif;
   color: #ffffff;
   position: relative;
   font-weight: bold;
+  transition: transform 0.3s ease;
 }
 
 .navbarItem a:hover,
 .navbarItem a.active,
 .navbarItem a:focus {
   color: #032539;
+  transform: scale(1.05);
 }
 
 .navbarItem a:hover::after,
@@ -42,10 +48,17 @@ body,
 p {
   font-family: sans-serif;
 }
+
+#parentM li,
+#LaFundacion li {
+  transition: transform 0.3s ease;
+}
+
 #parentM li,
 #LaFundacion li a:hover,
 #LaFundacion li a.active {
   background-color: #0d85d8;
+  transform: scale(1.05);
 }
 
 #LaFundacionSubmenu.collapsing {

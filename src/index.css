@@ -44,8 +44,8 @@ p {
 }
 #parentM li,
 #LaFundacion li a:hover,
-#LaFundacion li a:active {
-  background-color: blue;
+#LaFundacion li a.active {
+  background-color: #0d85d8;
 }
 
 #LaFundacionSubmenu.collapsing {
@@ -64,4 +64,16 @@ p {
   text-align: left;
   opacity: 0;
   transition: opacity 0s ease-in-out;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0; /* Ajusta según tu diseño */
+  z-index: 1000; /* Ajusta según tu diseño */
+}
+
+#LaFundacionBodys body {
+  text-align: justify;
+  padding-top: 1rem;
+  font-size: 20px;
 }

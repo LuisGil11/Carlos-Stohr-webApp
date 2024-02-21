@@ -1,14 +1,31 @@
 import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/collapse";
 import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export const Sidebar = () => {
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Ajusta según la posición de scroll deseada
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 5); // Ajusta según tu diseño
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="container-fluid">
+    <div className={`container-fluid ${isScrolled ? "sidebar" : ""}`}>
       <div className="row vh-100">
         <div
-          className="col-auto col-sm-2 d-flex flex-column justify-content-between"
+          className="col-auto col-sm-12 d-flex flex-column justify-content-between"
           style={{ backgroundColor: "#032539" }}
         >
           <div style={{ paddingTop: "8rem" }}>

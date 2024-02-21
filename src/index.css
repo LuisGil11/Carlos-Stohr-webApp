@@ -81,7 +81,7 @@ p {
 
 .sidebar {
   position: sticky;
-  top: 0; /* Ajusta según tu diseño */
+  top: 0;
   z-index: 1000; /* Ajusta según tu diseño */
 }
 

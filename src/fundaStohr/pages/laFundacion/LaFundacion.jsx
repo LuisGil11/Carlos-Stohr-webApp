@@ -27,7 +27,11 @@ export const LaFundacion = () => {
       <Col style={styles.col} sm={2}>
         <Sidebar />
       </Col>
-      <Col style={styles.col} sm={10}>
+      <Col
+        style={styles.col}
+        sm={10}
+        className="animate__animated animate__fadeIn"
+      >
         <Container style={styles.container}>
           <h1 style={styles.title}>Sobre Nosotros</h1>
           <hr className="text-black d-none d-sm-block" style={styles.divider} />

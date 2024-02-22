@@ -65,15 +65,15 @@ export const pagesInfo = [
     ],
   },
   {
-    href: "#Apoyanos",
-    title: "Apóyanos",
-    path: "/apoyanos",
-    icon: "bi bi-building",
-  },
-  {
     href: "#Contacto",
     title: "Contacto",
     path: "/contacto",
+    icon: "bi bi-building",
+  },
+  {
+    href: "#Apoyanos",
+    title: "Apóyanos",
+    path: "/apoyanos",
     icon: "bi bi-building",
   },
 ];

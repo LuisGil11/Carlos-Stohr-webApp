@@ -61,7 +61,7 @@ p {
   transform: scale(1.05);
 }
 
-#LaFundacionSubmenu.collapsing {
+[id*="Submenu"].collapsing {
   transition: height 0.3s ease-in-out;
   flex-direction: column !important;
   display: flex;
@@ -70,7 +70,7 @@ p {
   text-align: left;
 }
 
-#LaFundacionSubmenu.collapsing .nav-link {
+[id*="Submenu"].collapsing .nav-link {
   display: flex !important;
   width: 100% !important;
   white-space: normal;

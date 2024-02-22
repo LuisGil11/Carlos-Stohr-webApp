@@ -5,10 +5,7 @@ export const SidebarItem = ({ href, path, title, sections = [], icon }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  console.log(sections);
-
   const navigateTo = (route, id) => {
-    console.log(id);
     navigate(route);
     setTimeout(() => {
       const biografiaSection = document.getElementById(id);
@@ -19,7 +16,7 @@ export const SidebarItem = ({ href, path, title, sections = [], icon }) => {
     }, 100); // Delay for smoother scroll
   };
   return (
-    <li className={`nav-item text-white my-1 `}>
+    <li className={`nav-item text-white my-1`}>
       <a
         href={`${href}Submenu`}
         className={`nav-link text-white ${
@@ -33,12 +30,13 @@ export const SidebarItem = ({ href, path, title, sections = [], icon }) => {
         {sections.length > 0 && <i className="bi bi-chevron-down ps-3"></i>}
       </a>
       <ul
-        className="nav collapse ms-2 flex-column"
         id={`${href.replace("#", "")}Submenu`}
+        key={`${href.replace("#", "")}Submenu`}
+        className="nav collapse ms-2 flex-column"
         data-bs-parent={href}
       >
         {sections.map((section) => (
-          <li className="nav-item text-white pt-3">
+          <li className="nav-item text-white pt-3" key={section.id}>
             <a
               className="nav-link text-white"
               href="#"

@@ -47,7 +47,7 @@ export const Sidebar = () => {
               id="LaFundacion"
             >
               {pagesInfo.map((page) => (
-                <SidebarItem {...page} />
+                <SidebarItem {...page} key={page.href} />
               ))}
             </ul>
           </div>

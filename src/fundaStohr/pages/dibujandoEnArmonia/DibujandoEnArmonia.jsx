@@ -2,6 +2,7 @@ import React from "react";
 import { Sidebar } from "../../components/Sidebar";
 import { Col, Container, NavLink, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
+import { ImageWrapper } from "../../components/ImageWrapper";
 
 export const DibujandoEnArmonia = () => {
   return (
@@ -191,37 +192,16 @@ export const DibujandoEnArmonia = () => {
             className="text-black d-none d-sm-block"
             style={pageStyles.divider}
           />
-          <p style={pageStyles.text}>
-            {" "}
-            Ilustró libros del escritor José Joaquín Salazar Franco “Cheguaco”
-          </p>
-          <ul>
-            <li style={pageStyles.li}>
-              1991. “NUESTRAS VIVIENCIAS MARGARITEÑAS” - crónica de los pueblos
-              y su gente
-            </li>
-            <li style={pageStyles.li}>
-              1989. “EL DOBLE DOS DEL CHECO” sobre el juego del Dominó Reeditado
-              2001
-            </li>
-            <li style={pageStyles.li}>
-              1996. “MARGARITA UN SOLO ROSTRO” Costumbrismo
-            </li>
-            <li style={pageStyles.li}>1998. “LOS CHECOS EN VENEZUELA”</li>
-            <li style={pageStyles.li}>
-              2001. “EL CHECO TRAS LAS HUELLAS DEL COSTUMBRISMO MARGARITEÑO”
-            </li>
-            <li style={pageStyles.li}>
-              2004. “MIS BODAS DE ORO EN MARGARITA”. Crónica
-            </li>
-            <li style={pageStyles.li}>
-              {" "}
-              2005. “MI PASO POR LA TRINIDAD” - Crónica
-            </li>
-            <li style={pageStyles.li}>
-              2012. “RASTROS Y ROSTROS DE MARGARITA”. Ilustración
-            </li>
-          </ul>
+          <ImageWrapper
+            title={"Talleres"}
+            subtitle={"Actividades"}
+            description={`Se organizan talleres con facilitadores 
+            para compartir técnicas y materiales de dibujos que permitan 
+            aprender o mejorar el arte del dibujo de los participantes.`}
+            url={"./assets/DibujandoEnArmonia1.jpg"}
+            path={"/dibujando-al-aire-libre"}
+            section={"Talleres"}
+          />
         </Container>
       </Col>
     </Row>

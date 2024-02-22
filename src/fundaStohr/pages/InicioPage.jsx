@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import React, { useEffect, useState } from "react";
 import CarouselComponent from "../components/CaourselComponent";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { ImageWrapper } from "../components/ImageWrapper";
 
 const styles = {
   card: {
@@ -38,7 +39,7 @@ export const InicioPage = () => {
         style={{
           borderTop: "2px solid black",
           backgroundColor: "#ffffff",
-          height: "60rem",
+          height: "80rem",
           // marginTop: "8rem",
           borderBottom: "2px solid black",
         }}
@@ -48,6 +49,7 @@ export const InicioPage = () => {
             <Row className="my-auto animate__animated animate__fadeIn animate__slower">
               <h1
                 style={{
+                  fontFamily: '"DM Sans", sans-serif',
                   fontWeight: "bold",
                   fontStyle: "oblique",
                   color: "#032539",
@@ -60,6 +62,7 @@ export const InicioPage = () => {
               </h1>
               <h3
                 style={{
+                  fontFamily: '"DM Sans", sans-serif',
                   fontStyle: "italic",
                   paddingTop: "3vh",
                   color: "#032539",
@@ -121,7 +124,7 @@ export const InicioPage = () => {
                 borderRadius: "30% 70% 67% 33% / 30% 30% 70% 70%",
                 marginTop: "8rem",
                 marginBottom: "4rem",
-                marginLeft: "15rem",
+                marginLeft: "10rem",
               }}
               src="assets/carlosStohr.webp"
               alt="Carlos Stohr"
@@ -132,7 +135,7 @@ export const InicioPage = () => {
         </Container>
         <Container>
           <Row className="d-flex justify-content-center animate__animated animate__backInUp">
-            <Card className="shadow-lg mx-4 slideInBack" style={styles.card}>
+            {/* <Card className="shadow-lg mx-4 slideInBack" style={styles.card}>
               <h1 style={styles.cardText}>8</h1>
               <h4 style={styles.cardText}>Concursos</h4>
             </Card>
@@ -143,7 +146,36 @@ export const InicioPage = () => {
             <Card className="shadow-lg mx-4 slideInBack" style={styles.card}>
               <h1 style={styles.cardText}>10</h1>
               <h4 style={styles.cardText}>Exposiciones</h4>
-            </Card>
+            </Card> */}
+            <ImageWrapper
+              title={"Exposiciones"}
+              subtitle={"Actividades"}
+              description={`Se organizan talleres con facilitadores 
+            para compartir técnicas y materiales de dibujos que permitan 
+            aprender o mejorar el arte del dibujo de los participantes.`}
+              url={"./assets/DibujandoEnArmonia1.jpg"}
+              path={"/exposiciones"}
+            />
+            <ImageWrapper
+              title={"Concursos"}
+              subtitle={"Actividades"}
+              description={`Dentro de las actividades para materializarlo, 
+              se encuentra el apoyo a los artistas plásticos del dibujo, 
+              incentivar el Dibujo Urbano, buscando potenciales cronistas 
+              gráficos que deseen plasmar las vivencias, costumbres y folclore de su entorno.`}
+              url={"./assets/DibujandoEnArmonia1.jpg"}
+              path={"/concursos"}
+            />
+            <ImageWrapper
+              title={"Concursos"}
+              subtitle={"Actividades"}
+              description={`Dentro de las actividades para materializarlo, 
+              se encuentra el apoyo a los artistas plásticos del dibujo, 
+              incentivar el Dibujo Urbano, buscando potenciales cronistas 
+              gráficos que deseen plasmar las vivencias, costumbres y folclore de su entorno.`}
+              url={"./assets/DibujandoEnArmonia1.jpg"}
+              path={"/concursos"}
+            />
           </Row>
         </Container>
       </div>

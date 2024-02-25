@@ -9,11 +9,10 @@ export const SidebarItem = ({ href, path, title, sections = [], icon }) => {
     navigate(route);
     setTimeout(() => {
       const biografiaSection = document.getElementById(id);
-      console.log(biografiaSection);
       if (biografiaSection) {
         biografiaSection.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Delay for smoother scroll
+    }, 100);
   };
   return (
     <li className={`nav-item text-white my-1`}>

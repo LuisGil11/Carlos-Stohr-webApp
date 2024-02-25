@@ -178,7 +178,10 @@ export const LaFundacion = () => {
                   style={pageStyles.col}
                   className="col-6 d-flex justify-content-center"
                 >
-                  <img src="assets/BioCarlosStohr2.jpg" alt="BioCarlosStohr" />
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2FLaFundacion.jpeg?alt=media&token=855b4a24-b7c9-46fd-96e8-0f3654629607"
+                    alt="BioCarlosStohr"
+                  />
                 </Col>
               </Row>
             </Col>

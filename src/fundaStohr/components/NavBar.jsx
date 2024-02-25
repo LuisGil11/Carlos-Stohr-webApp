@@ -21,8 +21,8 @@ export const NavBar = () => {
       >
         <Navbar.Brand href="/">
           <img
-            src="assets/FCS_JPG-transformed.webp"
-            alt="CarlosStohr"
+            src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Logo%2Ffundacion.png?alt=media&token=8483e11e-3f9c-4b02-82ff-1a3a346465f8"
+            alt="FundaStohr"
             height="70vh"
             className="d-inline-block align-top"
           />

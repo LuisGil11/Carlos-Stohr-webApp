@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 html {
+=======
+:root {
+>>>>>>> 9aab4b5e0ec4c6f2de0d81d538f7f10807e77442
   scroll-behavior: smooth;
 }
 
@@ -90,6 +94,7 @@ p {
   padding-top: 1rem;
   font-size: 20px;
 }
+<<<<<<< HEAD
 
 
 .Footer {
@@ -188,3 +193,5 @@ p {
   color:#ffffff;
   padding-top: 12px;
 }
+=======
+>>>>>>> 9aab4b5e0ec4c6f2de0d81d538f7f10807e77442

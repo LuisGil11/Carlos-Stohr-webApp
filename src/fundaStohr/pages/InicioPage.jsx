@@ -148,13 +148,16 @@ export const InicioPage = () => {
               <h4 style={styles.cardText}>Exposiciones</h4>
             </Card> */}
             <ImageWrapper
-              title={"Exposiciones"}
-              subtitle={"Actividades"}
-              description={`Se organizan talleres con facilitadores 
-            para compartir técnicas y materiales de dibujos que permitan 
-            aprender o mejorar el arte del dibujo de los participantes.`}
-              url={"./assets/DibujandoEnArmonia1.jpg"}
-              path={"/exposiciones"}
+              title={"Carlos Stohr"}
+              subtitle={"Historia"}
+              description={`Karel Franšitek Stöhr Breuer nace en Praga, 
+              República Checa el 29 de Septiembre de 1931, hijo de Franšitek Josef Stöhr 
+              y Maria Breuer; hermano mayor de Tomáš Franšitek, todos de origen checo y católicos.`}
+              url={
+                "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Carlos%20Stohr%2FIMG_4520.jpg?alt=media&token=2fffe3bc-8155-4e05-a1f5-f8c7a63fe57e"
+              }
+              path={"/la-fundacion"}
+              section={"Biografia"}
             />
             <ImageWrapper
               title={"Concursos"}

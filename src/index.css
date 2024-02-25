@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 html {
-=======
-:root {
->>>>>>> 9aab4b5e0ec4c6f2de0d81d538f7f10807e77442
   scroll-behavior: smooth;
 }
 
@@ -94,16 +90,14 @@ p {
   padding-top: 1rem;
   font-size: 20px;
 }
-<<<<<<< HEAD
-
 
 .Footer {
-  background-color: #0d85d8; 
+  background-color: #0d85d8;
   color: #ffffff;
   padding: 2rem 0;
 }
 
-.ft-1 h4{
+.ft-1 h4 {
   font-weight: 700;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 2px;
@@ -129,8 +123,8 @@ p {
   margin: 0 1rem;
 }
 
-.footer-icons i:hover{
-  color:#ffffff;
+.footer-icons i:hover {
+  color: #ffffff;
   background: #032539;
 }
 
@@ -141,7 +135,7 @@ p {
 }
 
 .Footer h3 {
-  color:#fbf3f2 ;
+  color: #fbf3f2;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-top: 14px;
   padding-left: 80px;
@@ -151,8 +145,6 @@ p {
 .ft-2 ul {
   list-style: none;
   padding-left: 80px;
-  
-
 }
 
 .ft-2 ul li {
@@ -162,13 +154,13 @@ p {
 
 .ft-2 ul a {
   text-decoration: none;
-  color:#ffffff;
+  color: #ffffff;
   font-size: 1.06rem;
 }
 
 .ft-2 h4 {
   font-weight: 700;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 2px;
   padding-left: 80px;
   color: #ffffff;
@@ -185,13 +177,11 @@ p {
   padding-right: 0.5rem;
 }
 
-.ft-3 h4{
+.ft-3 h4 {
   padding-left: 0px;
   font-weight: 700;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 2px;
-  color:#ffffff;
+  color: #ffffff;
   padding-top: 12px;
 }
-=======
->>>>>>> 9aab4b5e0ec4c6f2de0d81d538f7f10807e77442

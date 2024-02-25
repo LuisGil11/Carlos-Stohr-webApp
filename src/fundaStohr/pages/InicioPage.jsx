@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import CarouselComponent from "../components/CaourselComponent";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import Footer from "../components/Footer";
+import { ImageWrapper } from "../components/ImageWrapper";
 
 const styles = {
   card: {

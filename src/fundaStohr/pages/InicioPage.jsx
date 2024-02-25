@@ -124,12 +124,12 @@ export const InicioPage = () => {
                 borderRadius: "30% 70% 67% 33% / 30% 30% 70% 70%",
                 marginTop: "8rem",
                 marginBottom: "4rem",
-                marginLeft: "10rem",
+                marginLeft: "5rem",
               }}
-              src="assets/carlosStohr.webp"
+              src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Carlos%20Stohr%2FDSC_0294.JPG?alt=media&token=03e9e4d8-9eec-4ae6-8d74-caeffe22fac6"
               alt="Carlos Stohr"
-              width="560"
-              height="500"
+              width="600"
+              height="400"
             />
           </Col>
         </Container>

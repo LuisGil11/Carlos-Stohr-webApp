@@ -15,7 +15,7 @@ export const SidebarItem = ({ href, path, title, sections = [], icon }) => {
     }, 100);
   };
   return (
-    <li className={`nav-item text-white my-1`}>
+    <li className={`nav-item text-white my-1`} style={{ paddingLeft: "1rem" }}>
       <a
         href={`${href}Submenu`}
         className={`nav-link text-white ${
@@ -26,7 +26,9 @@ export const SidebarItem = ({ href, path, title, sections = [], icon }) => {
       >
         <i className={icon}></i>
         <span className="ms-2 d-none d-xl-inline">{title}</span>
-        {sections.length > 0 && <i className="bi bi-chevron-down ps-3"></i>}
+        {sections.length > 0 && (
+          <i className="bi bi-chevron-down ps-3 d-flex justify-content-end"></i>
+        )}
       </a>
       <ul
         id={`${href.replace("#", "")}Submenu`}

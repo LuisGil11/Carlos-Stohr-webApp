@@ -1,6 +1,13 @@
 import React from "react";
 import { Sidebar } from "../../components/Sidebar";
-import { Col, Container, NavLink, Row } from "react-bootstrap";
+import {
+  Carousel,
+  CarouselItem,
+  Col,
+  Container,
+  NavLink,
+  Row,
+} from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
 import { ImageWrapper } from "../../components/ImageWrapper";
@@ -16,62 +23,75 @@ export const DibujandoEnArmonia = () => {
         sm={10}
         className="animate__animated animate__fadeIn"
       >
-        <Container style={pageStyles.container}>
-          <h1 style={pageStyles.title}>Dibujando En Armonía</h1>
-          <hr
-            className="text-black d-none d-sm-block"
-            style={pageStyles.divider}
-          />
-          <Row>
-            <Col
-              style={pageStyles.col}
-              className="col-xl-6 col-lg-12 d-flex justify-content-center"
+        <div
+          style={{
+            padding: "8rem 2rem",
+            marginBottom: "2rem",
+            marginTop: "2rem",
+            backgroundColor: "#e9ecef",
+            borderRadius: "0.3rem",
+          }}
+        >
+          <Container>
+            <h1
+              style={{
+                fontSize: "4.5rem",
+                fontWeight: "300",
+                lineHeight: "1.2",
+              }}
             >
-              <img
-                src="assets/DibujandoEnArmonia1.jpg"
-                alt="La Fundación"
-                style={{ borderRadius: "34% 66% 14% 86% / 100% 7% 93% 0% " }}
-              />
-            </Col>
-            <Col style={pageStyles.col} className="col-xl-6 col-lg-12">
-              <p style={pageStyles.text}>
-                La Fundación Carlos Stohr en busca de actividades para el
-                desarrollo artístico y cultural, en especial del Estado Nueva
-                Esparta, se inspira en el trabajo realizado por un grupo de
-                artistas en Margarita a través de lo que en su momento fue el
-                Circulo de Dibujo de Nueva Esparta (CIRDINE), integrado por los
-                artistas Cruz Acosta, Carlos Stohr, Carlos Aguirre, Francisco
-                Roca, Ini Toledo, Juan Vicente Silva, Lissette Villamizar, Raúl
-                Ávila y Veronica Rodríguez, quienes realizaban actividades en la
-                isla para promover el arte del dibujo, la búsqueda de nuevas
-                técnicas que permitieran compartir y descubrir sus diferentes
-                posibilidades, manifestando:
-              </p>
-              <q style={{ fontStyle: "italic", fontSize: "20px" }}>
-                Nosotros dibujamos para extraer la magia de las cosas que nos
-                rodean; La finalidad primordial de CIRDINE es hacernos magos,
-                convertirnos en taumaturgos para que con los trazos de grafito,
-                tinta o acuarela, insuflemos al papel un alma para que viva. Nos
-                estímula para que con la varita mágica del lápiz disfrutemos la
-                solana tropical, los gráciles movimientos de las doradas
-                margariteñas, los vigorosos esfuerzos de los pescadores en sus
-                faenas y la ondulante cabellera de los cocoteros acariciada por
-                el dulce aire de nuestra isla. En verdad, todos somos magos y
-                esta magia se hace realidad cuando nos dejamos atrapar por el
-                increíble placer de dibujar…
-              </q>
-              <hr style={pageStyles.divider} />
-              <h6
-                style={{
-                  fontSize: "15px",
-                  textAlign: "end",
-                  fontStyle: "italic",
-                }}
-              >
-                Juan Vicente Silva
-              </h6>
-            </Col>
-          </Row>
+              Dibujando En Armonía
+            </h1>
+            <hr
+              className="text-black d-none d-sm-block"
+              style={pageStyles.divider}
+            />
+            <Row>
+              <Col style={pageStyles.col} className="col-xl-6 col-lg-12">
+                <p style={pageStyles.text}>
+                  La Fundación Carlos Stohr en busca de actividades para el
+                  desarrollo artístico y cultural, en especial del Estado Nueva
+                  Esparta, se inspira en el trabajo realizado por un grupo de
+                  artistas en Margarita a través de lo que en su momento fue el
+                  Circulo de Dibujo de Nueva Esparta (CIRDINE), integrado por
+                  los artistas Cruz Acosta, Carlos Stohr, Carlos Aguirre,
+                  Francisco Roca, Ini Toledo, Juan Vicente Silva, Lissette
+                  Villamizar, Raúl Ávila y Veronica Rodríguez, quienes
+                  realizaban actividades en la isla para promover el arte del
+                  dibujo, la búsqueda de nuevas técnicas que permitieran
+                  compartir y descubrir sus diferentes posibilidades,
+                  manifestando:
+                </p>
+              </Col>
+              <Col>
+                <q style={{ fontStyle: "italic", fontSize: "20px" }}>
+                  Nosotros dibujamos para extraer la magia de las cosas que nos
+                  rodean; La finalidad primordial de CIRDINE es hacernos magos,
+                  convertirnos en taumaturgos para que con los trazos de
+                  grafito, tinta o acuarela, insuflemos al papel un alma para
+                  que viva. Nos estímula para que con la varita mágica del lápiz
+                  disfrutemos la solana tropical, los gráciles movimientos de
+                  las doradas margariteñas, los vigorosos esfuerzos de los
+                  pescadores en sus faenas y la ondulante cabellera de los
+                  cocoteros acariciada por el dulce aire de nuestra isla. En
+                  verdad, todos somos magos y esta magia se hace realidad cuando
+                  nos dejamos atrapar por el increíble placer de dibujar…
+                </q>
+                <hr style={pageStyles.divider} />
+                <h6
+                  style={{
+                    fontSize: "15px",
+                    textAlign: "end",
+                    fontStyle: "italic",
+                  }}
+                >
+                  Juan Vicente Silva
+                </h6>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <Container style={pageStyles.container}>
           <Row className="pt-5 d-flex justify-content-center">
             <ImageWrapper
               title={"Talleres"}

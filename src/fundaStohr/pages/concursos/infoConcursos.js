@@ -1,13 +1,13 @@
 export const tiposDeConcursos = [
   {
     title: 'Concurso Fundastohr - "Al Aire Libre"',
-    descCorta: `Planteado al estilo "Dibujo Urbano en inglés Urban Sketchers"
+    desccorta: `Planteado al estilo "Dibujo Urbano en inglés Urban Sketchers"
     para realizarse en un horario comprendido entre las 9 am a las
     2:00 pm, donde niños, jóvenes y adultos, dibujan en un espacio
     previamente definido, al aire libre, cada participante escoge lo
     que desee plasmar, según el criterios de los usos, costumbres
     del lugar y su gentilicio.`,
-    descLarga: `Es un concurso dirigido a artistas que ya tengan el conocimiento
+    desclarga: `Es un concurso dirigido a artistas que ya tengan el conocimiento
     del dibujo al aire libre, tanto para residentes del estado Nueva
     Esparta como para artistas residentes de otras partes del país
     que se programen previamente para participar en la actividad.
@@ -33,9 +33,9 @@ export const tiposDeConcursos = [
   },
   {
     title: "Concurso Temático",
-    descCorta: `Planteado para jóvenes y adultos a partir de los 15 años en
+    desccorta: `Planteado para jóvenes y adultos a partir de los 15 años en
     adelante.`,
-    descLarga: `En busca del dibujo urbano, donde se plantea un tema específico
+    desclarga: `En busca del dibujo urbano, donde se plantea un tema específico
     de los usos costumbres y vivencias. En un periodo de 3 semanas
     el participante debe ir al lugar, estudiar sobre el tema,
     escoger cómo y qué plasmar. A su vez debe acompañar su dibujo de
@@ -55,9 +55,9 @@ export const tiposDeConcursos = [
   },
   {
     title: "Concurso en Línea",
-    descCorta: `Planteado para jóvenes y adultos a partir de los 15 años en
+    desccorta: `Planteado para jóvenes y adultos a partir de los 15 años en
     adelante.`,
-    descLarga: `Luego de la experiencia de Concursos Online 2020 motivados a
+    desclarga: `Luego de la experiencia de Concursos Online 2020 motivados a
     realizar actividades para recrearnos en casa, debido a la medida
     de cuarentena por protección de salud pública a causa de la
     Pandemia de Covid 2019, la Fundación Carlos Stohr decide

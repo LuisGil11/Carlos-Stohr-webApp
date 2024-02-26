@@ -22,7 +22,7 @@ export const Sidebar = () => {
   }, []);
 
   return (
-    <div className={`${isScrolled ? "sidebar" : ""}`}>
+    <div className={`container-fluid ${isScrolled ? "sidebar" : ""}`}>
       <div className="row vh-100">
         <div
           className="col-auto col-sm-12 d-flex flex-column justify-content-between"

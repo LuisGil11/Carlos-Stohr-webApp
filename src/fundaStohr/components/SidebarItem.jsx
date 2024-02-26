@@ -15,7 +15,7 @@ export const SidebarItem = ({ href, path, title, sections = [], icon }) => {
     }, 100);
   };
   return (
-    <li className={`nav-item text-white my-1`} style={{ paddingLeft: "1rem" }}>
+    <li className={`nav-item text-white my-1`}>
       <a
         href={`${href}Submenu`}
         className={`nav-link text-white ${

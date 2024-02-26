@@ -13,6 +13,7 @@ export const ImageWrapper = ({
   const navigate = useNavigate();
 
   const navigateTo = (route, id) => {
+    console.log(route);
     navigate(route);
     setTimeout(() => {
       const biografiaSection = document.getElementById(id);

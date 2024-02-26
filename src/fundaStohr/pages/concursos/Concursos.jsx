@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Sidebar } from "../../components/Sidebar";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
+import { Tab } from "../../components/Tab/Tab";
+import { tiposDeConcursos } from "./infoConcursos";
 
 export const Concursos = () => {
+  const [currentTab, setCurrentTab] = useState("al-aire-libre");
+  const handleTab = (id) => {
+    setCurrentTab(id);
+  };
+
   return (
     <Row id="SobreNosotros">
       <Col style={pageStyles.col} sm={2}>
@@ -16,44 +23,36 @@ export const Concursos = () => {
         className="animate__animated animate__fadeIn"
       >
         <Container style={pageStyles.container}>
-          <h1 style={pageStyles.title}>Concursos</h1>
-          <hr
-            className="text-black d-none d-sm-block"
-            style={pageStyles.divider}
-          />
+          <h2 className="title d-flex justify-content-center">Concursos</h2>
+          <p style={pageStyles.text}>
+            La Fundación Carlos Stohr tiene como propósito fundamental el
+            colaborar con la cultura venezolana, en especial la Neoespartana.
+            Dentro de las actividades para materializarlo, se encuentra el apoyo
+            a los artistas plásticos del dibujo, incentivar el Dibujo Urbano,
+            buscando potenciales cronistas gráficos que deseen plasmar las
+            vivencias, costumbres y folclore de su entorno.
+            <br />
+            El apoyo se realiza a través de Concursos de Dibujos gratuitos,
+            acompañados por jueces artistas plásticos, reconocidos de Venezuela.
+            La premiación es material de dibujo profesional para cada ganador.
+            <br />
+            <br />
+            Los Concursos de Dibujo se realizan anualmente en varias
+            modalidades:
+          </p>
           <Row>
-            <Col
-              style={pageStyles.col}
-              className="col-xl-6 col-lg-12 d-flex justify-content-center"
-            >
-              <img
-                src="assets/DibujandoEnArmonia1.jpg"
-                alt="La Fundación"
-                style={{ borderRadius: "34% 66% 14% 86% / 100% 7% 93% 0% " }}
-              />
-            </Col>
-            <Col style={pageStyles.col} className="col-xl-6 col-lg-12">
-              <p style={pageStyles.text}>
-                La Fundación Carlos Stohr tiene como propósito fundamental el
-                colaborar con la cultura venezolana, en especial la
-                Neoespartana. Dentro de las actividades para materializarlo, se
-                encuentra el apoyo a los artistas plásticos del dibujo,
-                incentivar el Dibujo Urbano, buscando potenciales cronistas
-                gráficos que deseen plasmar las vivencias, costumbres y folclore
-                de su entorno.
-                <br />
-                El apoyo se realiza a través de Concursos de Dibujos gratuitos,
-                acompañados por jueces artistas plásticos, reconocidos de
-                Venezuela. La premiación es material de dibujo profesional para
-                cada ganador.
-                <br />
-                <br />
-                Los Concursos de Dibujo se realizan anualmente en varias
-                modalidades:
-              </p>
+            <Col style={pageStyles.col}>
+              {tiposDeConcursos.map((tipo) => (
+                <Tab
+                  key={tipo.id}
+                  {...tipo}
+                  currentTab={currentTab}
+                  handleTab={handleTab}
+                />
+              ))}
             </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <h1 id="ArteYEstilo" style={pageStyles.title}>
               Concurso Fundastohr - "Al Aire Libre"
             </h1>
@@ -167,7 +166,7 @@ export const Concursos = () => {
                 Oportunidad en la Adversidad.
               </p>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </Col>
       <Footer />

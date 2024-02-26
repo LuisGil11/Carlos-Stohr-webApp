@@ -185,3 +185,24 @@ p {
   color: #ffffff;
   padding-top: 12px;
 }
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #0d85d8;
+  bottom: 0;
+  left: calc(50% - 25px);
+}

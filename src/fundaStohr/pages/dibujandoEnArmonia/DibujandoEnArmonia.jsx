@@ -3,7 +3,7 @@ import { Sidebar } from "../../components/Sidebar";
 import { Col, Container, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
-import { ImageWrapper } from "../../components/ImageWrapper";
+import { ImageWrapper } from "../../components/imageWrapper/ImageWrapper";
 
 export const DibujandoEnArmonia = () => {
   return (

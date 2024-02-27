@@ -3,44 +3,17 @@ import React, { useEffect, useState } from "react";
 import CarouselComponent from "../components/CaourselComponent";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import Footer from "../components/Footer";
-import { ImageWrapper } from "../components/ImageWrapper";
-
-const styles = {
-  card: {
-    height: "15rem",
-    width: "15rem",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#032539",
-  },
-  cardText: { color: "white", textShadow: "2px 2px 0 black" },
-};
+import { ImageWrapper } from "../components/imageWrapper/ImageWrapper";
+import { Slider } from "../components/slider/Slider";
 
 export const InicioPage = () => {
-  const [count, setCount] = useState(0);
-
-  const startCounting = () => {
-    const target = 8;
-    const intervalId = setInterval(() => {
-      setCount((prevCount) => {
-        if (prevCount < target) return prevCount + 1;
-        else clearInterval(intervalId);
-        return target;
-      });
-    }, 100);
-  };
-
-  useEffect(() => {
-    startCounting();
-  }, []);
-
   return (
     <div style={{ backgroundColor: "#032539" }}>
       <div
         style={{
           borderTop: "2px solid black",
           backgroundColor: "#ffffff",
-          height: "80rem",
+          height: "60rem",
           // marginTop: "8rem",
           borderBottom: "2px solid black",
         }}
@@ -136,18 +109,6 @@ export const InicioPage = () => {
         </Container>
         <Container>
           <Row className="d-flex justify-content-center animate__animated animate__backInUp">
-            {/* <Card className="shadow-lg mx-4 slideInBack" style={styles.card}>
-              <h1 style={styles.cardText}>8</h1>
-              <h4 style={styles.cardText}>Concursos</h4>
-            </Card>
-            <Card className="shadow-lg mx-4 slideInBack" style={styles.card}>
-              <h1 style={styles.cardText}>+150</h1>
-              <h4 style={styles.cardText}>Participantes</h4>
-            </Card>
-            <Card className="shadow-lg mx-4 slideInBack" style={styles.card}>
-              <h1 style={styles.cardText}>10</h1>
-              <h4 style={styles.cardText}>Exposiciones</h4>
-            </Card> */}
             <ImageWrapper
               title={"Carlos Stohr"}
               subtitle={"Historia"}
@@ -181,11 +142,18 @@ export const InicioPage = () => {
               path={"/concursos"}
             />
           </Row>
+          <h1
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              color: "white",
+            }}
+          >
+            Nuestros Aliados
+          </h1>
+          <Slider />
         </Container>
       </div>
-      <Container className="d-flex justify-content-center">
-        <CarouselComponent />
-      </Container>
       <div style={{ height: "50vh" }}></div>
       <Footer />
     </div>

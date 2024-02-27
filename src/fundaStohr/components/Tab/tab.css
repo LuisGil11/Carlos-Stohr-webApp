@@ -61,10 +61,12 @@
   margin-bottom: 0;
   color: #555555;
   font-family: sans-serif;
+  text-align: justify;
 }
 
 .tabs .tab-pane p {
   color: #777777;
+  text-align: justify;
 }
 .fst-italic {
   font-style: italic !important;

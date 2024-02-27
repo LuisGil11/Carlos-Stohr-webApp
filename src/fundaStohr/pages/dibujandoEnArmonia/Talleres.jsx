@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Sidebar } from "../../components/Sidebar";
 import { pageStyles } from "../styles";
-import { ImageWrapper } from "../../components/ImageWrapper";
 
 export const Talleres = () => {
   return (

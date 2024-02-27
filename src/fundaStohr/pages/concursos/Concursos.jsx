@@ -4,7 +4,7 @@ import { Sidebar } from "../../components/Sidebar";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
 import { Tab } from "../../components/Tab/Tab";
-import { tiposDeConcursos } from "./infoConcursos";
+import { tiposDeConcursos } from "../../data/infoConcursos";
 import { TabContent } from "../../components/Tab/TabContent";
 
 export const Concursos = () => {
@@ -25,7 +25,13 @@ export const Concursos = () => {
       >
         <Container style={pageStyles.container}>
           <h2 className="title d-flex justify-content-center">Concursos</h2>
-          <p style={{ color: "#555555", fontFamily: "sans-serif" }}>
+          <p
+            style={{
+              color: "#555555",
+              fontFamily: "sans-serif",
+              textAlign: "justify",
+            }}
+          >
             La Fundación Carlos Stohr tiene como propósito fundamental el
             colaborar con la cultura venezolana, en especial la Neoespartana.
             Dentro de las actividades para materializarlo, se encuentra el apoyo

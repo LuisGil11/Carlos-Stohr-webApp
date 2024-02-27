@@ -3,6 +3,7 @@ import { Sidebar } from "../../components/Sidebar";
 import { Col, Container, NavLink, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
+import { Portafolio } from "../../components/portafolio/Portafolio";
 
 export const LaFundacion = () => {
   return (
@@ -214,6 +215,7 @@ export const LaFundacion = () => {
             className="text-black d-none d-sm-block"
             style={pageStyles.divider}
           />
+          <Portafolio />
           <h1 id="Libros" style={pageStyles.title}>
             Libros
           </h1>

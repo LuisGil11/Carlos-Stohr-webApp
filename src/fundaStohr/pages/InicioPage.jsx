@@ -55,7 +55,7 @@ export const InicioPage = () => {
                     href="https://www.facebook.com/fundastohr/"
                   >
                     <i
-                      className="fa-5x ps-4 bi bi-facebook icon"
+                      className="fa-5x ps-4 bi bi-facebook"
                       style={{
                         fontSize: "3rem",
                       }}

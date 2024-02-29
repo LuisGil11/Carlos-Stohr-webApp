@@ -14,7 +14,7 @@ export const Footer = () => {
                 Cronista Gráfico de la Isla de Margarita, Venezuela.
               </p>
               <div className="footer-icons">
-                <i className="bi bi-facebook icon"></i>
+                <i className="bi bi-facebook "></i>
                 <i className="bi bi-twitter-x"></i>
                 <i className="bi bi-instagram"></i>
               </div>

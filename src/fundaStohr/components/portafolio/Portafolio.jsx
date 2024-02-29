@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./portafolio.css";
 import { Gallery } from "../gallery/Gallery";
@@ -39,14 +39,28 @@ const PortfolioItem = ({ url, nombre, autor, onOpenImage, id }) => {
 export const Portafolio = ({ title, description, imagenes = [] }) => {
   const [activeImage, setActiveImage] = useState(null);
   const onOpenImage = (id) => {
+    console.log(id);
+    console.log(imagenes.length);
     if (id >= imagenes.length) setActiveImage(0);
-    if (id <= 0) setActiveImage(imagenes.length - 1);
-    setActiveImage(id);
+    else if (id < 0) setActiveImage(imagenes.length - 1);
+    else setActiveImage(id);
   };
   const onCloseImage = () => {
     setActiveImage(null);
   };
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === "Escape") {
+        onCloseImage();
+      }
+    };
 
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
   return (
     <>
       <div className="portfolio">
@@ -102,6 +116,7 @@ export const Portafolio = ({ title, description, imagenes = [] }) => {
       <Gallery
         images={imagenes}
         onCloseImage={onCloseImage}
+        onOpenImage={onOpenImage}
         activeImage={activeImage}
       />
     </>

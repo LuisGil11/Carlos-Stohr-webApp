@@ -21,12 +21,7 @@ export const LaFundacion = () => {
       {/* sm={10} */}
       {/* className="animate__animated animate__fadeIn" */}
       {/* > */}
-      <div id="LaFundacion" className="d-flex align-items-center">
-        <Container>
-          <h1>Fundación Carlos Stohr</h1>
-          <h2></h2>
-        </Container>
-      </div>
+
       <Container style={pageStyles.container}>
         <h1 style={pageStyles.title}>Sobre Nosotros</h1>
         <hr

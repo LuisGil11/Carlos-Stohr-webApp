@@ -1,0 +1,40 @@
+#header.header-transparent {
+  background: transparent;
+}
+
+#header.header-scrolled {
+  background: rgba(42, 44, 57, 0.9);
+}
+
+#header {
+  height: 70px;
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  background: rgba(42, 44, 57, 0.9);
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  background: #2759ff;
+}
+
+.navbar .nav-link:hover {
+  color: rgb(255, 136, 0);
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px 7px 15px;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #ffffff;
+  white-space: nowrap;
+  transition: 0.3s;
+  border-radius: 50px;
+}

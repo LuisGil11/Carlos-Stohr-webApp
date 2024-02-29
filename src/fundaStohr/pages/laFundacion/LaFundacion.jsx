@@ -5,6 +5,9 @@ import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
 import { Portafolio } from "../../components/portafolio/Portafolio";
 import { obras } from "../../data/infoObras";
+import { FadedTitle } from "../../components/FadedTitle/FadedTitle";
+import { DescriptionBox } from "../../components/DescriptionBox/DescriptionBox";
+import "./laFundacion.css";
 
 export const LaFundacion = () => {
   return (
@@ -17,6 +20,12 @@ export const LaFundacion = () => {
         sm={10}
         className="animate__animated animate__fadeIn"
       >
+        {/* <div id="laFundacion" className="d-flex align-items-center">
+          <Container>
+            <h1>Fundación Carlos Stohr</h1>
+            <h2></h2>
+          </Container>
+        </div> */}
         <Container style={pageStyles.container}>
           <h1 style={pageStyles.title}>Sobre Nosotros</h1>
           <hr
@@ -188,39 +197,38 @@ export const LaFundacion = () => {
               </Row>
             </Col>
           </Row>
-          <Row>
-            <h1 id="ArteYEstilo" style={pageStyles.title}>
-              Arte y Estilo
-            </h1>
-            <hr
-              className="text-black d-none d-sm-block"
-              style={pageStyles.divider}
-            />
-            <Col style={pageStyles.col}>
-              <h3 style={{ fontWeight: "bold" }}>Técnica </h3>
-              <p style={pageStyles.text}>
-                Tinta china, grafito, plumilla, pinceles, acuarelas, sanguina
+          <FadedTitle title="Arte y estilo" />
+          <Row className="d-flex justify-content-center">
+            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <DescriptionBox
+                title="Técnica"
+                description="Tinta china, grafito, plumilla, pinceles, acuarelas, sanguina
                 pasteles y con menos frecuencia el óleo. Su trabajo sobre papel
-                mayormente.
-              </p>
-            </Col>
-            <Col>
-              <img src="assets/ArteYEstilo1.webp" alt="Arte y Estilo" />
-              <img src="assets/ArteYEstilo2.webp" alt="Arte y Estilo" />
-            </Col>
+                mayormente."
+                icon="bi bi-brush"
+              />
+            </div>
+            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <DescriptionBox
+                title="Temática"
+                description="Paisajes, vivencias, oficios, usos y costumbres del gentilicio margariteño."
+                icon="bi bi-easel"
+              />
+            </div>
+            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <DescriptionBox
+                title="Firma"
+                description="El artista firmaba sus obras *C.STOHR*.
+                En obras abstractas y/o modernas *C.S. PRAGA*"
+                icon="bi bi-pen"
+              />
+            </div>
           </Row>
-          <h1 id="AlgunasObras" style={pageStyles.title}>
-            Algunas Obras
-          </h1>
-          <hr
-            className="text-black d-none d-sm-block"
-            style={pageStyles.divider}
-          />
-          <Portafolio
+          <FadedTitle
             title="Algunas Obras"
             description="El Cronista Gráfico y algunas de sus obras"
-            imagenes={obras}
           />
+          <Portafolio imagenes={obras} />
           <h1 id="Libros" style={pageStyles.title}>
             Libros
           </h1>

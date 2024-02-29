@@ -36,7 +36,7 @@ const PortfolioItem = ({ url, nombre, autor, onOpenImage, id }) => {
   );
 };
 
-export const Portafolio = ({ title, description, imagenes = [] }) => {
+export const Portafolio = ({ imagenes = [] }) => {
   const [activeImage, setActiveImage] = useState(null);
   const onOpenImage = (id) => {
     console.log(id);
@@ -65,11 +65,6 @@ export const Portafolio = ({ title, description, imagenes = [] }) => {
     <>
       <div className="portfolio">
         <Container>
-          <div className="section-title">
-            <span>{title}</span>
-            <h1>{title}</h1>
-            <p>{description}</p>
-          </div>
           <Row className="d-flex portfolio-container">
             <Col lg={4} md={6}>
               {imagenes.map(

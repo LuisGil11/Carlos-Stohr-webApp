@@ -57,7 +57,6 @@ export const Gallery = ({
     setTo("next");
   };
 
-  console.log(activeImage);
   return (
     <div
       className={`glightbox-container glightbox-clean ${

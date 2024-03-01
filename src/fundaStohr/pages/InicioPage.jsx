@@ -79,102 +79,10 @@ export const InicioPage = () => {
       </div>
       <div
         style={{
-          // borderTop: "2px solid black",
           backgroundColor: "#ffffff",
           height: "60rem",
-          // marginTop: "8rem",
-          // borderBottom: "2px solid black",
         }}
       >
-        {/* <Container className="d-flex align-items-center">
-          <Col className="col-5 mx-auto">
-            <Row className="my-auto animate__animated animate__fadeIn animate__slower">
-              <h1
-                style={{
-                  fontFamily: '"DM Sans", sans-serif',
-                  fontWeight: "bold",
-                  fontStyle: "oblique",
-                  color: "#032539",
-                  // textShadow: "2px 1px 0 black",
-                  paddingBottom: "10px",
-                  borderBottom: "3px solid #032539",
-                }}
-              >
-                Fundación Carlos Stohr
-              </h1>
-              <h3
-                style={{
-                  fontFamily: '"DM Sans", sans-serif',
-                  fontStyle: "italic",
-                  paddingTop: "3vh",
-                  color: "#032539",
-                  // textShadow: "2px 1px 0 black",
-                }}
-              >
-                Una Fundación para preservar el legado cultural del que fue
-                Cronista Gráfico de la Isla de Margarita, Venezuela.
-              </h3>
-            </Row>
-            <Row>
-              <Col style={{ marginTop: "5rem" }}>
-                <div className="animate__animated animate__backInLeft">
-                  <a
-                    className="ps-2 "
-                    href="https://www.facebook.com/fundastohr/"
-                  >
-                    <i
-                      className="fa-5x ps-4 bi bi-facebook"
-                      style={{
-                        fontSize: "3rem",
-                      }}
-                    ></i>
-                  </a>
-                  <a
-                    className="ps-2 "
-                    href="https://twitter.com/fundastohr?lang=es"
-                  >
-                    <i
-                      className=" ps-4 bi bi-twitter-x"
-                      style={{ fontSize: "3rem" }}
-                    ></i>
-                  </a>
-                  <a
-                    className="ps-2 "
-                    href="https://www.instagram.com/fundastohr/?hl=es"
-                  >
-                    <i
-                      className=" ps-4 bi bi-instagram"
-                      style={{ fontSize: "3rem" }}
-                    ></i>
-                  </a>
-                  <a
-                    className="animate__animated animate__bounce ps-2"
-                    href="fundacion.carlos.stohr@gmail.com"
-                  >
-                    <i
-                      className=" ps-4 bi bi-envelope-fill"
-                      style={{ fontSize: "3rem" }}
-                    ></i>
-                  </a>
-                </div>
-              </Col>
-            </Row>
-          </Col>
-          <Col className="animate__animated animate__fadeIn animate__slower">
-            <img
-              style={{
-                borderRadius: "30% 70% 67% 33% / 30% 30% 70% 70%",
-                marginTop: "8rem",
-                marginBottom: "4rem",
-                marginLeft: "5rem",
-              }}
-              src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Carlos%20Stohr%2FDSC_0294.JPG?alt=media&token=03e9e4d8-9eec-4ae6-8d74-caeffe22fac6"
-              alt="Carlos Stohr"
-              width="600"
-              height="400"
-            />
-          </Col>
-        </Container> */}
         <Container className="pt-5">
           <Row className="d-flex justify-content-center animate__animated animate__backInUp">
             <ImageWrapper
@@ -211,7 +119,7 @@ export const InicioPage = () => {
             />
           </Row>
         </Container>
-        <div style={{ backgroundColor: "#032539", height: "100%" }}>
+        <div style={{ backgroundColor: "#032539", height: "40%" }}>
           <Container className="pt-3">
             <h1
               className="title"
@@ -228,8 +136,8 @@ export const InicioPage = () => {
             <Slider />
           </Container>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };

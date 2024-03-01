@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Sidebar } from "../../components/Sidebar";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
 import { Tab } from "../../components/Tab/Tab";
 import { tiposDeConcursos } from "../../data/infoConcursos";
 import { TabContent } from "../../components/Tab/TabContent";
+import "./concursos.css";
 
 export const Concursos = () => {
   const [currentTab, setCurrentTab] = useState("alAireLibre");
@@ -14,24 +14,11 @@ export const Concursos = () => {
   };
 
   return (
-    <Row id="SobreNosotros">
-      <Col style={pageStyles.col} sm={2}>
-        <Sidebar />
-      </Col>
-      <Col
-        style={pageStyles.col}
-        sm={10}
-        className="animate__animated animate__fadeIn"
-      >
-        <Container style={pageStyles.container}>
+    <>
+      <div id="concursos">
+        <Container style={{ marginTop: "8rem" }}>
           <h2 className="title d-flex justify-content-center">Concursos</h2>
-          <p
-            style={{
-              color: "#555555",
-              fontFamily: "sans-serif",
-              textAlign: "justify",
-            }}
-          >
+          <p>
             La Fundación Carlos Stohr tiene como propósito fundamental el
             colaborar con la cultura venezolana, en especial la Neoespartana.
             Dentro de las actividades para materializarlo, se encuentra el apoyo
@@ -47,26 +34,37 @@ export const Concursos = () => {
             Los Concursos de Dibujo se realizan anualmente en varias
             modalidades:
           </p>
-          <Row>
-            <div className=" tabs col-lg-4 mb-5 mb-lg-0">
-              {tiposDeConcursos.map((tipo) => (
-                <Tab
-                  key={tipo.id}
-                  {...tipo}
-                  currentTab={currentTab}
-                  handleTab={handleTab}
-                />
-              ))}
-            </div>
-            <div className="tabs col-lg-8">
-              {tiposDeConcursos.map((tipo) => (
-                <TabContent key={tipo.id} {...tipo} currentTab={currentTab} />
-              ))}
-            </div>
-          </Row>
         </Container>
-      </Col>
+      </div>
+      <Container className="py-5">
+        <Row id="SobreNosotros">
+          <Col style={pageStyles.col} sm={2}></Col>
+          <Col
+            style={pageStyles.col}
+            sm={10}
+            className="animate__animated animate__fadeIn"
+          >
+            <Row>
+              <div className=" tabs col-lg-4 mb-5 mb-lg-0">
+                {tiposDeConcursos.map((tipo) => (
+                  <Tab
+                    key={tipo.id}
+                    {...tipo}
+                    currentTab={currentTab}
+                    handleTab={handleTab}
+                  />
+                ))}
+              </div>
+              <div className="tabs col-lg-8">
+                {tiposDeConcursos.map((tipo) => (
+                  <TabContent key={tipo.id} {...tipo} currentTab={currentTab} />
+                ))}
+              </div>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
       <Footer />
-    </Row>
+    </>
   );
 };

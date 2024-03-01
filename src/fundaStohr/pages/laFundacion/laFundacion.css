@@ -96,3 +96,33 @@
   font-family: "Comic Neue", sans-serif;
   color: #948c81;
 }
+
+#sobreNosotros {
+  background: url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Carlos%20Stohr%2FDSC_0011.JPG?alt=media&token=15e78f5b-12a2-454d-b371-fbb10edbd78d)
+    center top no-repeat fixed;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+  position: relative;
+}
+
+#sobreNosotros::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.651);
+  z-index: 9;
+}
+
+#sobreNosotros .container {
+  position: relative;
+  z-index: 10;
+}
+
+.sobreNosotros p {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #333;
+}

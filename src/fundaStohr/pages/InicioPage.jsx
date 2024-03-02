@@ -104,7 +104,7 @@ export const InicioPage = () => {
               incentivar el Dibujo Urbano, buscando potenciales cronistas 
               gráficos que deseen plasmar las vivencias, costumbres y folclore de su entorno.`}
               url={
-                "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Fartistas500px.jpg?alt=media&token=d7f65400-879d-482e-8859-61c99c814b7c"
+                "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Fartistas416x555px.jpg?alt=media&token=fa188c4d-3f7e-49e4-92fc-ba8d330644d6"
               }
               path={"/concursos"}
             />
@@ -117,7 +117,7 @@ export const InicioPage = () => {
               de promoción. Los invitamos a visualizar las exposiciones virtuales y a seguir de 
               cerca nuestras muestras en museos y centros culturales.`}
               url={
-                "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Fexposicion500px.jpg?alt=media&token=a3d5a404-3684-4286-9d8e-9925ecfadc53"
+                "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Fexposicion416x500px.jpg?alt=media&token=1fe8de35-c7e1-4025-8ec2-c0c066bc4cd9"
               }
               path={"/exposiciones"}
             />

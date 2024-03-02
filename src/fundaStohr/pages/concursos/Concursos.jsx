@@ -18,17 +18,16 @@ export const Concursos = () => {
       <div id="concursos">
         <Container style={{ marginTop: "8rem" }}>
           <h2 className="title d-flex justify-content-center">Concursos</h2>
-          <p>
+          <p style={{ textAlign: "justify" }}>
             La Fundación Carlos Stohr tiene como propósito fundamental el
             colaborar con la cultura venezolana, en especial la Neoespartana.
             Dentro de las actividades para materializarlo, se encuentra el apoyo
             a los artistas plásticos del dibujo, incentivar el Dibujo Urbano,
             buscando potenciales cronistas gráficos que deseen plasmar las
-            vivencias, costumbres y folclore de su entorno.
-            <br />
-            El apoyo se realiza a través de Concursos de Dibujos gratuitos,
-            acompañados por jueces artistas plásticos, reconocidos de Venezuela.
-            La premiación es material de dibujo profesional para cada ganador.
+            vivencias, costumbres y folclore de su entorno. El apoyo se realiza
+            a través de Concursos de Dibujos gratuitos, acompañados por jueces
+            artistas plásticos, reconocidos de Venezuela. La premiación es
+            material de dibujo profesional para cada ganador.
             <br />
             <br />
             Los Concursos de Dibujo se realizan anualmente en varias

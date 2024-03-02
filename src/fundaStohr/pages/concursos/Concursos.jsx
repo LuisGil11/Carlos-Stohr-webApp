@@ -38,14 +38,12 @@ export const Concursos = () => {
       </div>
       <Container className="py-5">
         <Row id="SobreNosotros">
-          <Col style={pageStyles.col} sm={2}></Col>
           <Col
             style={pageStyles.col}
-            sm={10}
             className="animate__animated animate__fadeIn"
           >
             <Row>
-              <div className=" tabs col-lg-4 mb-5 mb-lg-0">
+              <div className="tabs col-lg-4 mb-5 mb-lg-0">
                 {tiposDeConcursos.map((tipo) => (
                   <Tab
                     key={tipo.id}

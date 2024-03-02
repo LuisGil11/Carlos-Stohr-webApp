@@ -1,0 +1,261 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+#inicio {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Carlos%20Stohr%2FDSC_0294.JPG?alt=media&token=03e9e4d8-9eec-4ae6-8d74-caeffe22fac6);
+  background-size: cover;
+  background-position-y: 20%;
+  padding: 0;
+  height: 90vh;
+}
+
+#inicio h1 {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+#inicio h2 {
+  color: #ffffff;
+  margin: 10px 0 0 0;
+  padding-right: 20rem;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.inicio-waves {
+  display: block;
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+
+.wave1 use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave2 use {
+  animation: move-forever2 8s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave3 use {
+  animation: move-forever3 6s linear infinite;
+  animation-delay: -2s;
+}
+
+.carousel div {
+  border-radius: 5%;
+}
+
+.h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p {
+  font-family: sans-serif;
+}
+
+#parentM li,
+#LaFundacion li {
+  transition: transform 0.3s ease;
+}
+
+#parentM li,
+#LaFundacion li a:hover,
+#LaFundacion li a.active {
+  background-color: #0d85d8;
+  transform: scale(1.05);
+}
+
+[id*="Submenu"].collapsing {
+  transition: height 0.3s ease-in-out;
+  flex-direction: column !important;
+  display: flex;
+  width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+
+[id*="Submenu"].collapsing .nav-link {
+  display: flex !important;
+  width: 100% !important;
+  white-space: normal;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#LaFundacionBodys body {
+  text-align: justify;
+  padding-top: 1rem;
+  font-size: 20px;
+}
+
+.Footer {
+  background-color: rgba(69, 72, 94, 0.9);
+  color: #ffffff;
+  padding: 2% 0;
+}
+
+.ft-1 h4 {
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.footer-icons i {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: #ffffff;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 17px;
+  color: #0d85d8;
+  transition: all 0.5s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 5);
+  padding-left: 11px;
+  padding-right: 10px;
+  margin: 0 1rem;
+}
+
+.footer-icons i:hover {
+  color: #ffffff;
+  background: #032539;
+}
+
+.ft-1 p {
+  padding: 0rem 2rem 0.8rem 0;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.Footer h3 {
+  color: #fbf3f2;
+  font-family: "Poppins", sans-serif;
+  padding-left: 80px;
+  bottom: 0px;
+}
+
+.ft-2 ul {
+  list-style: none;
+  padding-left: 80px;
+}
+
+.ft-2 ul li {
+  padding: 0.3rem 0;
+  font-weight: 500;
+}
+
+.ft-2 ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.06rem;
+}
+
+.ft-2 h4 {
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  padding-left: 80px;
+  color: #ffffff;
+}
+
+.ft-3 p {
+  font-weight: 500;
+  padding: 0.1rem 0;
+  font-size: 1.06rem;
+}
+
+.ft-3 i {
+  padding-right: 0.5rem;
+}
+
+.ft-3 h4 {
+  padding-left: 0px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  color: #ffffff;
+
+}
+
+ .footer-icon-style{
+  padding-right: 2px;
+  padding-left: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1;
+  align-items:center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #0d85d8;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+

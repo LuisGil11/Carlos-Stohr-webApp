@@ -1,0 +1,31 @@
+#concursos {
+  background: url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Carlos%20Stohr%2FDSC_0263.JPG?alt=media&token=e1f65f40-b45e-432b-8a7a-ad50d5741903)
+    center top no-repeat fixed;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+  position: relative;
+  background-position: center;
+  height: 70vh;
+}
+
+#concursos::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.651);
+  z-index: 9;
+}
+
+#concursos .container {
+  position: relative;
+  z-index: 10;
+}
+
+#concursos p {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #333;
+}

@@ -1,0 +1,29 @@
+#contact .contact-item {
+    margin-bottom: 30px;
+}
+
+#contact.contact-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#contact.contact-info i {
+    font-size: 48px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #0f2f57;
+    padding-top: 30px;
+}
+
+#contact.contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0d85d8;
+}
+
+#contact.contact-info address {
+    margin-bottom: 0;
+    color: #000;
+}
+

@@ -28,7 +28,8 @@ export const tiposDeConcursos = [
     experiencia en otra localidad de importancia de la isla, se
     estima la fecha agosto-septiembre 2024. Se anunciará después del
     primer trimestre del 2024.`,
-    imagen: "assets/HomePage1.jpeg",
+    imagen:
+      "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2FalAireLibre.jpeg?alt=media&token=9fbb69cf-c7a2-44a5-bcca-e9fdd67dc451",
     id: "alAireLibre",
   },
   {
@@ -50,7 +51,8 @@ export const tiposDeConcursos = [
     Este concurso se realiza en conjunto con una persona natural o
     jurídica que decida colaborar en esta actividad de promoción y
     apoyo.`,
-    imagen: "assets/HomePage1.jpeg",
+    imagen:
+      "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2FActividad.jpeg?alt=media&token=d2f7ba45-2ef2-424c-9746-fbef069985c1",
     id: "tematico",
   },
   {
@@ -81,7 +83,8 @@ export const tiposDeConcursos = [
     ACNUR Venezuela, para el caso de Dibujando Historias de
     Oportunidad en la Adversidad.`,
 
-    imagen: "assets/HomePage1.jpeg",
+    imagen:
+      "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Factividades3.jpeg?alt=media&token=1eaa4c32-3f43-43f9-be0a-74ff313df880",
     id: "enlinea",
   },
 ];

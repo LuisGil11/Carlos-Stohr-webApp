@@ -95,7 +95,6 @@ export const InicioPage = () => {
                 "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Carlos%20Stohr%2FIMG_4520.jpg?alt=media&token=2fffe3bc-8155-4e05-a1f5-f8c7a63fe57e"
               }
               path={"/la-fundacion"}
-              section={"Biografia"}
             />
             <ImageWrapper
               title={"Concursos"}

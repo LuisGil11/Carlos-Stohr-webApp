@@ -2,25 +2,11 @@ import React, { useEffect } from "react";
 import "./imageWrapper.css";
 import { useNavigate } from "react-router-dom";
 
-export const ImageWrapper = ({
-  url,
-  title,
-  subtitle,
-  description,
-  path,
-  section,
-}) => {
+export const ImageWrapper = ({ url, title, subtitle, description, path }) => {
   const navigate = useNavigate();
 
-  const navigateTo = (route, id) => {
-    console.log(route);
+  const navigateTo = (route) => {
     navigate(route);
-    setTimeout(() => {
-      const biografiaSection = document.getElementById(id);
-      if (biografiaSection) {
-        biografiaSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
   };
 
   return (
@@ -36,8 +22,8 @@ export const ImageWrapper = ({
           </h6>
           <p className="mt-3 item-text">{description}</p>
         </div>
-        <p className="item-link" onClick={() => navigateTo(path, section)}>
-          <strong>Leer más</strong>
+        <p className="item-link" onClick={() => navigateTo(path)}>
+          <strong>Ver más</strong>
         </p>
       </div>
     </div>

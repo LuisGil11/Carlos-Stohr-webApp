@@ -6,6 +6,7 @@ export const ImageWrapper = ({ url, title, subtitle, description, path }) => {
   const navigate = useNavigate();
 
   const navigateTo = (route) => {
+    window.scrollTo(0, 0);
     navigate(route);
   };
 

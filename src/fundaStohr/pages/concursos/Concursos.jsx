@@ -28,10 +28,6 @@ export const Concursos = () => {
             a través de Concursos de Dibujos gratuitos, acompañados por jueces
             artistas plásticos, reconocidos de Venezuela. La premiación es
             material de dibujo profesional para cada ganador.
-            <br />
-            <br />
-            Los Concursos de Dibujo se realizan anualmente en varias
-            modalidades:
           </p>
         </Container>
       </div>

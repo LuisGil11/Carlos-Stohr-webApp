@@ -35,7 +35,7 @@
 .expoTitle:before,
 .expoTitle:after {
   content: "";
-  width: 50px;
+  width: auto;
   height: 2px;
   background: #0d85d8;
   display: inline-block;
@@ -87,16 +87,21 @@
 
 .exposiciones .subtitleLeft::after {
   content: "";
-  width: 180px;
+  min-width: none;
+  width: 50%;
+  max-width: 180px;
   height: 2px;
   background: #0d85d8;
   display: inline-block;
   margin: 0px 0px 10px 15px;
   text-align: left;
 }
+
 .exposiciones .subtitleRight::before {
   content: "";
-  width: 180px;
+  min-width: none;
+  width: 50%;
+  max-width: 180px;
   height: 2px;
   background: #0d85d8;
   display: inline-block;

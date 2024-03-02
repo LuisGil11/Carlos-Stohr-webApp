@@ -20,7 +20,9 @@ export const ImageWrapper = ({ url, title, subtitle, description, path }) => {
           <h6 className="item-subtitle">
             <strong>{title}</strong>
           </h6>
-          <p className="mt-3 item-text">{description}</p>
+          <p className="mt-3 item-text" style={{ textAlign: "justify" }}>
+            {description}
+          </p>
         </div>
         <p className="item-link" onClick={() => navigateTo(path)}>
           <strong>Ver más</strong>

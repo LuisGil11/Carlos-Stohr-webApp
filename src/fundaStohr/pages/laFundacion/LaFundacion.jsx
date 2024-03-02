@@ -39,7 +39,7 @@ export const LaFundacion = () => {
                 description={
                   "Organizar exposiciones de las obras de Carlos Stohr."
                 }
-                imageUrl="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Fexposicion.jpeg?alt=media&token=7bcd1de8-b013-4920-8ab8-8c2f4d9800f0"
+                imageUrl="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Factividades3.jpeg?alt=media&token=1eaa4c32-3f43-43f9-be0a-74ff313df880"
                 icon="bi bi-calendar-event"
               />
               <SobreNosotrosCard
@@ -47,7 +47,7 @@ export const LaFundacion = () => {
                 description={`Apoyar y fomentar nuevas generaciones de artistas, a través de
               Concursos de Dibujos, Exposiciones y actividades de promoción y
               formación.`}
-                imageUrl="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Fartistas.jpeg?alt=media&token=5a8f16e4-403f-46b1-b2b0-85fe78e2e0d5"
+                imageUrl="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2FalAireLibre.jpeg?alt=media&token=9fbb69cf-c7a2-44a5-bcca-e9fdd67dc451"
                 icon="bi bi-search"
               />
             </Row>

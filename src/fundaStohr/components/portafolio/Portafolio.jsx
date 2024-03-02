@@ -39,8 +39,6 @@ const PortfolioItem = ({ url, nombre, autor, onOpenImage, id }) => {
 export const Portafolio = ({ imagenes = [] }) => {
   const [activeImage, setActiveImage] = useState(null);
   const onOpenImage = (id) => {
-    console.log(id);
-    console.log(imagenes.length);
     if (id >= imagenes.length) setActiveImage(0);
     else if (id < 0) setActiveImage(imagenes.length - 1);
     else setActiveImage(id);

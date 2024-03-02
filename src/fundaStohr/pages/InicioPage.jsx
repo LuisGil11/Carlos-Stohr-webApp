@@ -104,18 +104,23 @@ export const InicioPage = () => {
               se encuentra el apoyo a los artistas plásticos del dibujo, 
               incentivar el Dibujo Urbano, buscando potenciales cronistas 
               gráficos que deseen plasmar las vivencias, costumbres y folclore de su entorno.`}
-              url={"./assets/DibujandoEnArmonia1.jpg"}
+              url={
+                "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Fartistas500px.jpg?alt=media&token=d7f65400-879d-482e-8859-61c99c814b7c"
+              }
               path={"/concursos"}
             />
             <ImageWrapper
-              title={"Concursos"}
+              title={"Exposiciones"}
               subtitle={"Actividades"}
-              description={`Dentro de las actividades para materializarlo, 
-              se encuentra el apoyo a los artistas plásticos del dibujo, 
-              incentivar el Dibujo Urbano, buscando potenciales cronistas 
-              gráficos que deseen plasmar las vivencias, costumbres y folclore de su entorno.`}
-              url={"./assets/DibujandoEnArmonia1.jpg"}
-              path={"/concursos"}
+              description={`Para Carlos Stohr la promoción de la cultura era vital. 
+              Es por ello que siguiendo este legado, la Fundación apoya y fomenta a 
+              los artistas del dibujo de Venezuela a través de Exposiciones  y actividades 
+              de promoción. Los invitamos a visualizar las exposiciones virtuales y a seguir de 
+              cerca nuestras muestras en museos y centros culturales.`}
+              url={
+                "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Fexposicion500px.jpg?alt=media&token=a3d5a404-3684-4286-9d8e-9925ecfadc53"
+              }
+              path={"/exposiciones"}
             />
           </Row>
         </Container>

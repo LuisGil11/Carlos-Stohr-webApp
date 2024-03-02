@@ -41,7 +41,13 @@ span.navbar-toggler-icon {
   width: 1.2rem;
 }
 
-.navbar .nav-link:hover {
+.navbar .nav-link {
+  color: #ffc527;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   color: #ffffff;
 }
 

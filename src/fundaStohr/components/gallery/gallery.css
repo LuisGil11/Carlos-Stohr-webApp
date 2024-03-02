@@ -3,7 +3,7 @@
   height: 100%;
   position: fixed;
   top: 7%;
-  left: 16%;
+  left: 1%;
   z-index: 999999 !important;
   overflow: hidden;
   -ms-touch-action: none;
@@ -41,7 +41,6 @@
   margin: 0 auto;
   top: 47%;
 }
-
 .glightbox-clean .gslide-description {
   background: #fff;
   max-width: 800px;
@@ -91,9 +90,6 @@
   align-items: center;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  color: #444444;
-  opacity: 1;
-  overflow: hidden;
 }
 
 .gslide:not(.current) {
@@ -128,17 +124,16 @@
 .glightbox-clean .gclose {
   width: 35px;
   height: 35px;
-  top: 3%;
   position: absolute;
   opacity: 0.7;
-  right: 17%;
+  right: 2%;
+  top: 2%;
   background-color: rgba(0, 0, 0, 0.32);
   color: #fff;
 }
 
 .glightbox-clean .gprev {
   position: absolute;
-  left: 30px;
   width: 40px;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.32);
@@ -148,7 +143,7 @@
 
 .glightbox-clean .gnext {
   position: absolute;
-  right: 17%;
+  right: 2%;
   width: 40px;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.32);

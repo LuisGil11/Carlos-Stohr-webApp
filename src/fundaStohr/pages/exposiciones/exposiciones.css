@@ -1,0 +1,104 @@
+#exposiciones {
+  background: url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Obras-Carlos-Stohr%2FIMG_E3076.JPG?alt=media&token=4f5fc930-b910-4e42-aa11-505e76815adf)
+    center top no-repeat fixed;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+  position: relative;
+  background-position: center;
+  height: 70vh;
+}
+
+#exposiciones::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.651);
+  z-index: 9;
+}
+
+#exposiciones .container {
+  position: relative;
+  z-index: 10;
+}
+
+.expoTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.expoTitle:before,
+.expoTitle:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #0d85d8;
+  display: inline-block;
+}
+
+.expoTitle:before {
+  margin: 0 15px 10px 0;
+}
+
+.expoTitle:after {
+  margin: 0 0 10px 15px;
+}
+
+.exposiciones .expo-item h3 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.exposiciones .expo-item .image-stack {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.exposiciones .expo-item .image-stack .stack-front {
+  grid-row: 1;
+  grid-column: 1 / span 8;
+  margin-top: 20%;
+  width: 100%;
+  z-index: 2;
+}
+
+.exposiciones .expo-item .image-stack .stack-back {
+  grid-column: 4 / -1;
+  grid-row: 1;
+  width: 100%;
+  z-index: 1;
+}
+
+.exposiciones .expo-item img {
+  border: 6px solid #ffffff;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.exposiciones .subtitleLeft::after {
+  content: "";
+  width: 180px;
+  height: 2px;
+  background: #0d85d8;
+  display: inline-block;
+  margin: 0px 0px 10px 15px;
+  text-align: left;
+}
+.exposiciones .subtitleRight::before {
+  content: "";
+  width: 180px;
+  height: 2px;
+  background: #0d85d8;
+  display: inline-block;
+  margin: 0px 15px 10px 0px;
+}

@@ -36,8 +36,8 @@
 
 .item-img {
   width: 100%;
-  transition: all 1s;
   height: 500px;
+  transition: all 1s;
   object-fit: cover;
 }
 

@@ -1,0 +1,35 @@
+.tda {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Margarita%2FISLAS-MARGARITA-transformed.jpeg?alt=media&token=430fd4f4-3177-4887-8acc-7f012a4076a9)
+      fixed center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.tda h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
+.tda p {
+  color: #fff;
+}
+
+.talleres {
+  background: url(https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/events-bg.jpg)
+    center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.talleres::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}

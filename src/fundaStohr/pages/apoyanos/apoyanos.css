@@ -1,0 +1,105 @@
+#Apoyanos {
+    background: url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Obras-Carlos-Stohr%2FIMG_E3076.JPG?alt=media&token=4f5fc930-b910-4e42-aa11-505e76815adf)
+      center top no-repeat fixed;
+    background-size: cover;
+    padding: 60px 0 40px 0;
+    position: relative;
+    height: 90dvh;
+  }
+  
+  #Apoyanos::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.406);
+    z-index: 9;
+  }
+  
+  #Apoyanos .container {
+    position: relative;
+    z-index: 10;
+  }
+
+ #Apoyanos h1.apoyanos-title{
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #000;
+    padding-left: 41px;
+    font-family: "Raleway", sans-serif;
+  }
+
+#Apoyanos h2.apoyanos-subtitle {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    color: #000;
+    padding-left: 45px;
+    font-family: "Raleway", sans-serif;
+}
+
+#Apoyanos h2.apoyanos-medios {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#Apoyanos .text-apoyanos {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+#Apoyanos h3.subtitleRight {
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.image-stack {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+.image-stack .stack-front {
+    grid-row: 1;
+    grid-column: 1 / span 8;
+    margin-top: 20%;
+    width: 100%;
+    z-index: 2;
+  }
+  
+.image-stack .stack-back {
+    grid-column: 4 / -1;
+    grid-row: 1;
+    width: 100%;
+    z-index: 1;
+  }
+  
+.image-stack img {
+    border: 6px solid #ffffff;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-border{
+    border: 6px solid #ffffff;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+.box-apoyanos {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

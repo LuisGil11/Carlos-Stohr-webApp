@@ -9,9 +9,13 @@ import "./contacto.css"
 export const Contacto = () => {
   return (
     <Row>
-      <div id = "Contacto">
-        <Container>
-          <DoubleTitle />
+      <div id = "Contacto" style={{marginBottom: '0rem'}}>
+        <Container >
+          <DoubleTitle 
+            title={"contact"}
+            subtitle={"contáctanos"}
+          />
+           
           <Row id = "contact" className="contact-info">
           
             <CardsContacto 
@@ -28,8 +32,7 @@ export const Contacto = () => {
               icono={"bi bi-envelope"}
               title={"Email"}
               description={"fundacion.carlos.stohr@gmail.com"}
-            /> 
-
+            />
           </Row>
         </Container>
       </div>

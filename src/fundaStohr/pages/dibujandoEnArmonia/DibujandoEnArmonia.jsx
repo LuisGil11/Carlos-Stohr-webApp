@@ -1,5 +1,4 @@
 import React from "react";
-import { Sidebar } from "../../components/Sidebar";
 import { Col, Container, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
@@ -8,9 +7,6 @@ import { ImageWrapper } from "../../components/imageWrapper/ImageWrapper";
 export const DibujandoEnArmonia = () => {
   return (
     <Row id="SobreNosotros" className="g-0">
-      <Col style={pageStyles.col} sm={2}>
-        <Sidebar />
-      </Col>
       <Col
         style={pageStyles.col}
         sm={10}

@@ -66,11 +66,11 @@ export const Apoyanos = () => {
             </div>
             <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
               <DescriptionBox
-                title={"Colaboración en $USD"}
+                title={"¡Colabora con Nosotros!"}
                 description={
-                  "Banco: Mercantil Nombre: Fundación Carlos Stohr Cuenta Corriente: 0105-004-16-1014697816"
+                  "Juntos, transformamos vidas. Únete a nuestra causa y sé parte del cambio que el mundo necesita."
                 }
-                icon={"bi bi-paypal"}
+                icon={"bi bi-newspaper"}
               />
             </div>
             <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
@@ -87,7 +87,7 @@ export const Apoyanos = () => {
             <h3 className="subtitleRight">
               ¡descubre como contribuir para lograr un impacto positivo!
             </h3>
-            <p className="text-apoyanos" style={{ textAlign: "justify" }}>
+            <p className="text-apoyanos-second" style={{ textAlign: "justify" }}>
               Utilizado para el montaje y logística de los Concursos y
               Exposiciones, como también gastos administrativos y adquisición de
               bienes y servicios para logar los objetivos de la Fundación. Este

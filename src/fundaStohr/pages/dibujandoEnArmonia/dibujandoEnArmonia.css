@@ -18,8 +18,9 @@
 }
 
 .talleres {
-  background: url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Talleres%2FtallerPastelAlOleo-transformed.webp?alt=media&token=e47d6a1c-e68b-4799-bb70-5c5341cd6ec0)
-    center center fixed;
+  /* background: url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Talleres%2FtallerPastelAlOleo-transformed.webp?alt=media&token=e47d6a1c-e68b-4799-bb70-5c5341cd6ec0)
+    center center fixed; */
+  background-color: #f2f6fa;
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -27,7 +28,7 @@
 
 .talleres:before {
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -87,7 +88,7 @@
 .talleres p,
 .talleres li,
 .talleres h2 {
-  color: #fff;
+  color: #0f2f5781;
 }
 
 .talleres .talleres-img:hover {

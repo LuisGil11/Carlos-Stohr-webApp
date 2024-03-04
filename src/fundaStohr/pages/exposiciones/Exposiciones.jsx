@@ -13,8 +13,20 @@ export const Exposiciones = () => {
       <Container className="d-flex justify-content-center pt-5">
         <Row className="gy-4 expo-item">
           <Col lg={5}>
-            <h3 className="subtitleLeft">Entrevista a Carlos Stohr</h3>
-            <p style={{ textAlign: "justify" }}>
+            <h3
+              className="subtitleLeft"
+              style={{ fontFamily: '"Oswald", sans-serif' }}
+            >
+              Entrevista a Carlos Stohr
+            </h3>
+            <p
+              style={{
+                fontFamily: '"Raleway", sans-serif',
+                fontWeight: "500",
+                fontSize: "18px",
+                textAlign: "justify",
+              }}
+            >
               En mayo 2017 el Periódico El Sol de Margarita le realizó una
               entrevista a Carlos Stohr, quien refirió que la
               internacionalización de los artistas surgidos en el semillero
@@ -69,10 +81,20 @@ export const Exposiciones = () => {
             />
           </Col>
           <Col lg={5} className="d-flex justify-content-center flex-column">
-            <h3 className="subtitleRight" style={{ textAlign: "end" }}>
+            <h3
+              className="subtitleRight"
+              style={{ fontFamily: '"Oswald", sans-serif', textAlign: "end" }}
+            >
               Promoción de los Artistas
             </h3>
-            <p style={{ textAlign: "justify" }}>
+            <p
+              style={{
+                fontFamily: '"Raleway", sans-serif',
+                fontWeight: "500",
+                fontSize: "18px",
+                textAlign: "justify",
+              }}
+            >
               <q style={{ fontStyle: "italic" }}>
                 <strong>
                   En Margarita hay artistas, pintores y escultores, pero hace

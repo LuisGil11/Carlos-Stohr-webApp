@@ -16,7 +16,14 @@ export const LaFundacion = () => {
         <Container className="sobreNosotros">
           <Row>
             <FadedTitle title="Sobre Nosotros" />
-            <p>
+            <p
+              style={{
+                fontFamily: '"Raleway", sans-serif',
+                fontWeight: "500",
+                fontSize: "18px",
+                textAlign: "justify",
+              }}
+            >
               La Fundación Carlos Stohr fue creada en Julio 2018. Está
               conformada por sus hijos y amigos de la Isla de Margarita, quienes
               compartieron con el artista a lo largo de su incursión por la
@@ -62,7 +69,7 @@ export const LaFundacion = () => {
                 Carlos Stohr
               </h6>
               <NavLink href="assets/quote.webp" style={{ fontStyle: "italic" }}>
-                <q>
+                <q style={{ fontFamily: "Forum", fontWeight: "600" }}>
                   No acostumbro seguir cabalmente los principios del dibujo.
                   Pinto la realidad social de una época, lo que veo, aquello que
                   me da la oportunidad de plasmar un mensaje. Deseo ser claro en

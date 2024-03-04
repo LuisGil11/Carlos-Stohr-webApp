@@ -18,7 +18,14 @@ export const Concursos = () => {
       <div id="concursos">
         <Container style={{ marginTop: "8rem" }}>
           <h2 className="title d-flex justify-content-center">Concursos</h2>
-          <p style={{ textAlign: "justify" }}>
+          <p
+            style={{
+              fontFamily: '"Raleway", sans-serif',
+              fontWeight: "500",
+              fontSize: "18px",
+              textAlign: "justify",
+            }}
+          >
             La Fundación Carlos Stohr tiene como propósito fundamental el
             colaborar con la cultura venezolana, en especial la Neoespartana.
             Dentro de las actividades para materializarlo, se encuentra el apoyo

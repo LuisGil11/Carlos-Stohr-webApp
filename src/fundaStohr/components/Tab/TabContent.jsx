@@ -21,9 +21,14 @@ export const TabContent = ({
         role="tabpanel"
       >
         <h3>{title}</h3>
-        <p className="fst-italic">{desccorta}</p>
+        <p
+          className="fst-italic"
+          style={{ fontFamily: "Forum", fontWeight: "600" }}
+        >
+          {desccorta}
+        </p>
         <img src={imagen} alt="img" className="img-fluid" />
-        <p>{desclarga}</p>
+        <p style={{ textIndent: "30px", lineHeight: "35px" }}>{desclarga}</p>
       </div>
     </div>
   );

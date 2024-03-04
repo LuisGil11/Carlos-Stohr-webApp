@@ -54,7 +54,6 @@
 
 .menu .menu-content h6 {
   padding-right: 10px;
-  background: #fff;
   position: relative;
   z-index: 3;
   font-weight: 700;
@@ -125,4 +124,19 @@
   text-align: center;
   padding-bottom: 30px;
   color: #333;
+}
+
+#arte-y-estilo {
+  background-color: #f2f6fa;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
+}
+#libros {
+  background-color: #f2f6fa;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
 }

@@ -7,7 +7,6 @@ import "./navbar.css";
 import { useLocation } from "react-router-dom";
 
 export const NavBar = () => {
-  console.log(!(window.innerWidth > 991));
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
@@ -56,6 +55,7 @@ export const NavBar = () => {
                 location.pathname === "/la-fundacion" ? "active" : ""
               }`}
             >
+              <i className="bi bi-building pe-2"></i>
               LA FUNDACIÓN
             </Nav.Link>
             <Nav.Link
@@ -64,6 +64,7 @@ export const NavBar = () => {
                 location.pathname === "/concursos" ? "active" : ""
               }`}
             >
+              <i className="bi bi-trophy-fill pe-2"></i>
               CONCURSOS
             </Nav.Link>
             <Nav.Link
@@ -72,6 +73,7 @@ export const NavBar = () => {
                 location.pathname === "/exposiciones" ? "active" : ""
               }`}
             >
+              <i className="bi bi-calendar-event pe-2"></i>
               EXPOSICIONES
             </Nav.Link>
             <Nav.Link
@@ -80,18 +82,24 @@ export const NavBar = () => {
                 location.pathname === "/dibujando-en-armonia" ? "active" : ""
               }`}
             >
+              <i className="bi bi-pencil-square pe-2"></i>
               DIBUJANDO EN ARMONÍA
             </Nav.Link>
             <Nav.Link
               href="/contacto"
               className={`${location.pathname === "/contacto" ? "active" : ""}`}
             >
+              <i
+                className="bi bi-phone-vibrate pe-2"
+                style={{ fontSize: "20px" }}
+              ></i>
               CONTACTO
             </Nav.Link>
             <Nav.Link
               href="/apoyanos"
               className={`${location.pathname === "/apoyanos" ? "active" : ""}`}
             >
+              <i className="bi bi-person-arms-up"></i>
               APÓYANOS
             </Nav.Link>
           </Nav>

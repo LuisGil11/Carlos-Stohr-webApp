@@ -3,7 +3,7 @@
 }
 
 #header.header-scrolled {
-  background: rgba(42, 44, 57, 0.9);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #header {
@@ -11,11 +11,11 @@
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: rgba(42, 44, 57, 0.9);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .header-mobile {
-  background: rgba(42, 44, 57, 0.9);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .navbar {
@@ -27,8 +27,22 @@
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  background: #2759ff;
+  background: #002b5e;
+  font-weight: 500;
 }
+.navbar.header-scrolled a:hover,
+.navbar.header-scrolled .active,
+.navbar.header-scrolled .active:focus,
+.navbar.header-scrolled li:hover > a {
+  background: #fff;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.navbar.header-scrolled a.navbar-brand:hover {
+  background: none;
+}
+
 a.navbar-brand:hover {
   background: none;
 }
@@ -42,13 +56,24 @@ span.navbar-toggler-icon {
 }
 
 .navbar .nav-link {
-  color: #2759ff;
+  color: #002b5e;
+  font-weight: 500;
+}
+.navbar.header-scrolled .nav-link {
+  color: #fff;
   font-weight: 500;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #ffffff;
+  font-size: 17px;
+}
+.navbar.header-scrolled .nav-link:hover,
+.navbar.header-scrolled .nav-link.active {
+  color: #002b5e;
+  font-weight: 500;
+  font-size: 17px;
 }
 
 .navbar a,

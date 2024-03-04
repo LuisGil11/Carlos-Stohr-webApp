@@ -79,7 +79,7 @@ export const InicioPage = () => {
       </div>
       <div
         style={{
-          backgroundColor: "#ffffff",
+          backgroundColor: "#fff",
           height: "60rem",
         }}
       >

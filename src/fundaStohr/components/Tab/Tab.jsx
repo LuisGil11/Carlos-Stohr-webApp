@@ -15,8 +15,8 @@ export const Tab = ({ title, desccorta, id, currentTab, handleTab }) => {
           aria-selected="true"
           role="tab"
         >
-          <h4>{title}</h4>
-          <p>{desccorta}</p>
+          <h4 style={{ fontFamily: '"Madimi One", sans-serif' }}>{title}</h4>
+          <p style={{ fontFamily: '"Raleway", sans-serif' }}>{desccorta}</p>
         </a>
       </li>
       <li className="nav-item" role="presentation"></li>

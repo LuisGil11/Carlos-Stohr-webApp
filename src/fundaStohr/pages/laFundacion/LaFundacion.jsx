@@ -89,7 +89,7 @@ export const LaFundacion = () => {
           </Row>
         </Container>
       </div>
-      <Container className="timeline">
+      <Container className="timeline pb-5">
         <Row>
           <FadedTitle title="Biografía" />
           <Col lg={6}>
@@ -235,39 +235,43 @@ export const LaFundacion = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
-        <FadedTitle title="Arte y estilo" />
-        <Row className="d-flex justify-content-center">
-          <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <DescriptionBox
-              title="Técnica"
-              description="Tinta china, grafito, plumilla, pinceles, acuarelas, sanguina
-                pasteles y con menos frecuencia el óleo. Su trabajo sobre papel
-                mayormente."
-              icon="bi bi-brush"
-            />
-          </div>
-          <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <DescriptionBox
-              title="Temática"
-              description="Paisajes, vivencias, oficios, usos y costumbres del gentilicio margariteño."
-              icon="bi bi-easel"
-            />
-          </div>
-          <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <DescriptionBox
-              title="Firma"
-              description="El artista firmaba sus obras *C.STOHR*.
-                En obras abstractas y/o modernas *C.S. PRAGA*"
-              icon="bi bi-pen"
-            />
-          </div>
-        </Row>
-        <FadedTitle
-          title="Algunas Obras"
-          description="El Cronista Gráfico y algunas de sus obras"
-        />
-        <Portafolio imagenes={obras} />
+      <div id="arte-y-estilo">
+        <Container>
+          <FadedTitle title="Arte y estilo" />
+          <Row className="d-flex justify-content-center">
+            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <DescriptionBox
+                title="Técnica"
+                description="Tinta china, grafito, plumilla, pinceles, acuarelas, sanguina
+              pasteles y con menos frecuencia el óleo. Su trabajo sobre papel
+              mayormente."
+                icon="bi bi-brush"
+              />
+            </div>
+            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <DescriptionBox
+                title="Temática"
+                description="Paisajes, vivencias, oficios, usos y costumbres del gentilicio margariteño."
+                icon="bi bi-easel"
+              />
+            </div>
+            <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <DescriptionBox
+                title="Firma"
+                description="El artista firmaba sus obras *C.STOHR*.
+              En obras abstractas y/o modernas *C.S. PRAGA*"
+                icon="bi bi-pen"
+              />
+            </div>
+          </Row>
+        </Container>
+      </div>
+      <FadedTitle
+        title="Algunas Obras"
+        description="El Cronista Gráfico y algunas de sus obras"
+      />
+      <Portafolio imagenes={obras} />
+      <div id="libros">
         <Container className="menu pb-5">
           <FadedTitle
             title="Libros"
@@ -336,7 +340,7 @@ export const LaFundacion = () => {
             </Col>
           </Row>
         </Container>
-      </Container>
+      </div>
       <Footer />
     </>
   );

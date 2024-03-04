@@ -115,11 +115,62 @@ export const DibujandoEnArmonia = () => {
       </Row>
       <Row>
         <div id="talleres" className="talleres">
-          <Container>
-            <DoubleTitle
-              subtitle="Talleres Dibujando en Armonía"
-              title="Eventos"
-            />
+          <Container style={{ position: "relative" }}>
+            <Row className="pb-5 pt-5">
+              <Col lg={6} className="content">
+                <DoubleTitle
+                  subtitle="Taller pastel al Óleo"
+                  title="Compartir el Arte del Dibujo"
+                />
+                <p className="fst-italic">
+                  Fundastohr inicia este 2021 con un Taller de Pastel al Óleo
+                  donde participaron los artistas que se destacaron en las
+                  actividades realizadas desde nuestra creación en el 2019.
+                </p>
+                <ul>
+                  <li>
+                    <i class="bi bi-check-circle"></i> Fueron 16 artistas
+                    jóvenes adultos y una niña quienes aceptaron la invitación a
+                    participar de un día para dibujar con una técnica diferente
+                    al aire libre.
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle"></i> Este taller fue realizado
+                    el sábado 4 de septiembre del 2021 en casa de la directora
+                    de arte de Fundastohr, la artista plástico Lissette
+                    Villamizar
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle"></i> Se contó con el apoyo de
+                    los artistas margariteños Gustavo Fernández y Miguel Armando
+                    Ávila, quienes compartieron sus conocimientos del uso del
+                    pastel al óleo en el dibujo.
+                  </li>
+                </ul>
+                <p>
+                  El 29 de septiembre del 2021 con motivo a los 90 años de
+                  nacimiento de Carlos Stohr, se inaugura a las 10:00 am en el
+                  Museo Nueva Cádiz de la Asunción, Isla de Margarita, la
+                  Exposición Pastel al Óleo, la cual muestra las obras de los
+                  participantes y facilitadores de este taller; también a esta
+                  muestra se incluye dos obras del Carlos Stohr.
+                  <br />
+                  <br />
+                  Los invitamos a visitar esta Exposición, estará disponible
+                  hasta finales de octubre 2021, en un horario de 9 am a 1:00 pm
+                  de Lunes a sábado en semana flexible (tiempos de medidas
+                  sanitaria por Pandemia Covid 19).
+                </p>
+              </Col>
+              <Col lg={6}>
+                <div className="talleres-img">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Talleres%2FExpo_Pastel_al_oleo-transformed.webp?alt=media&token=e26b39fd-c0d4-4879-9fde-1b053ac0f59c"
+                    alt=""
+                  />
+                </div>
+              </Col>
+            </Row>
           </Container>
         </div>
       </Row>
@@ -127,45 +178,7 @@ export const DibujandoEnArmonia = () => {
         <Col style={pageStyles.col} className="col-xl-12 col-lg-12">
           <Row>
             <Col>
-              <h1 style={pageStyles.title}>Talleres Pastel al Óleo</h1>
-              <hr style={pageStyles.divider} />
-              <h4
-                style={{
-                  textAlign: "end",
-                  fontStyle: "italic",
-                }}
-              >
-                Compartir el arte del dibujo
-              </h4>
-              <p style={pageStyles.text}>
-                Fundastohr inicia este 2021 con un Taller de Pastel al Óleo
-                donde participaron los artistas que se destacaron en las
-                actividades realizadas desde nuestra creación en el 2019.
-                <br />
-                <br />
-                Fueron 16 artistas jóvenes adultos y una niña quienes aceptaron
-                la invitación a participar de un día para dibujar con una
-                técnica diferente al aire libre. Este taller fue realizado el
-                sábado 4 de septiembre del 2021 en casa de la directora de arte
-                de Fundastohr, la artista plástico Lissette Villamizar, y se
-                contó con el apoyo de los artistas margariteños Gustavo
-                Fernández y Miguel Armando Ávila, quienes compartieron sus
-                conocimientos del uso del pastel al óleo en el dibujo.
-                <br />
-                <br />
-                El 29 de septiembre del 2021 con motivo a los 90 años de
-                nacimiento de Carlos Stohr, se inaugura a las 10:00 am en el
-                Museo Nueva Cádiz de la Asunción, Isla de Margarita, la
-                Exposición Pastel al Óleo, la cual muestra las obras de los
-                participantes y facilitadores de este taller; también a esta
-                muestra se incluye dos obras del Carlos Stohr.
-                <br />
-                <br />
-                Los invitamos a visitar esta Exposición, estará disponible hasta
-                finales de octubre 2021, en un horario de 9 am a 1:00 pm de
-                Lunes a sábado en semana flexible (tiempos de medidas sanitaria
-                por Pandemia Covid 19).
-              </p>
+              <p style={pageStyles.text}></p>
             </Col>
             <Col>
               <h1 style={pageStyles.title}>

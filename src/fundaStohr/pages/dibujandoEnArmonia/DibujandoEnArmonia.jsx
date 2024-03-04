@@ -116,7 +116,7 @@ export const DibujandoEnArmonia = () => {
       <Row>
         <div id="talleres" className="talleres">
           <Container style={{ position: "relative" }}>
-            <Row className="pb-5 pt-5">
+            <Row className="pt-5">
               <Col lg={6} className="content">
                 <DoubleTitle
                   subtitle="Taller pastel al Óleo"
@@ -175,43 +175,65 @@ export const DibujandoEnArmonia = () => {
         </div>
       </Row>
       <Row>
-        <Col style={pageStyles.col} className="col-xl-12 col-lg-12">
-          <Row>
-            <Col>
-              <p style={pageStyles.text}></p>
-            </Col>
-            <Col>
-              <h1 style={pageStyles.title}>
-                Taller de Dibujo y Perspectiva para niños
-              </h1>
-              <hr style={pageStyles.divider} />
-              <h4
-                style={{
-                  textAlign: "end",
-                  fontStyle: "italic",
-                }}
-              >
-                Compartir el arte del dibujo
-              </h4>
-              <p style={pageStyles.text}>
-                Fundastohr realizó el primer Taller de Dibujo y Perspectiva
-                dirigido a lo artistas de la categoría infantil que se
-                destacaron en las actividades realizadas desde nuestra creación
-                en el 2019.
-                <br />
-                <br />
-                Fueron invitados 12 niñ@s a participar de una mañana, desde las
-                9:00 am hasta las 1:00 pm el sábado 20 de noviembre del 2021
-                para dibujar ofreciendo técnicas de aprendizaje de la
-                perspectiva en el dibujo. Esta actividad se realizó al aire
-                libre en los jardines de la casa de la directora de arte de
-                Fundastohr, la artista plástico Lissette Villamizar, y se contó
-                con el apoyo de los artistas margariteños Yurenny
-                Oliveros,Gustavo Fernández y Miguel Armando Ávila.
-              </p>
-            </Col>
-          </Row>
-        </Col>
+        <div id="talleres" className="talleres">
+          <Container style={{ position: "relative" }}>
+            <Row className="pb-5">
+              <Col lg={6}>
+                <div className="talleres-img">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Talleres%2FTalleres2.jpg?alt=media&token=e2fc8a1b-27c3-4caf-8f66-95d9f14dcc46"
+                    alt=""
+                  />
+                </div>
+              </Col>
+              <Col lg={6} className="content">
+                <DoubleTitle
+                  subtitle="Taller de Dibujo y Perspectiva para niños"
+                  title="Compartir el Arte del Dibujo"
+                />
+                <p className="fst-italic">
+                  Fundastohr realizó el primer Taller de Dibujo y Perspectiva
+                  dirigido a lo artistas de la categoría infantil que se
+                  destacaron en las actividades realizadas desde nuestra
+                  creación en el 2019.
+                </p>
+                <ul>
+                  <li>
+                    <i class="bi bi-check-circle"></i> Fueron invitados 12 niñ@s
+                    a participar de una mañana, desde las 9:00 am hasta las 1:00
+                    pm el sábado 20 de noviembre del 2021 para dibujar
+                    ofreciendo técnicas de aprendizaje de la perspectiva en el
+                    dibujo.
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle"></i> Esta actividad se realizó
+                    al aire libre en los jardines de la casa de la directora de
+                    arte de Fundastohr, la artista plástico Lissette Villamizar
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle"></i> Se contó con el apoyo de
+                    los artistas margariteños Yurenny Oliveros,Gustavo Fernández
+                    y Miguel Armando Ávila.
+                  </li>
+                </ul>
+                <p>
+                  El 29 de septiembre del 2021 con motivo a los 90 años de
+                  nacimiento de Carlos Stohr, se inaugura a las 10:00 am en el
+                  Museo Nueva Cádiz de la Asunción, Isla de Margarita, la
+                  Exposición Pastel al Óleo, la cual muestra las obras de los
+                  participantes y facilitadores de este taller; también a esta
+                  muestra se incluye dos obras del Carlos Stohr.
+                  <br />
+                  <br />
+                  Los invitamos a visitar esta Exposición, estará disponible
+                  hasta finales de octubre 2021, en un horario de 9 am a 1:00 pm
+                  de Lunes a sábado en semana flexible (tiempos de medidas
+                  sanitaria por Pandemia Covid 19).
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </Row>
       <Row>
         {/* <Col

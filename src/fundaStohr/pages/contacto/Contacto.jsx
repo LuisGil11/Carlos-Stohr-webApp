@@ -8,8 +8,8 @@ import { GoogleMap, MarkerF, useLoadScript } from "@react-google-maps/api";
 
 const libraries = ["places"];
 const center = {
-  lat: 10.493995324866681,
-  lng: -66.85504776742661,
+  lat: 10.493218487514199,
+  lng: -66.85493479697271,
 };
 
 export const Contacto = () => {
@@ -28,7 +28,7 @@ export const Contacto = () => {
 
   return (
     <Row>
-      <div id="Contacto" style={{ marginBottom: "0rem" }}>
+      <div id="Contacto">
         <Container>
           <DoubleTitle title={"contact"} subtitle={"contáctanos"} />
 
@@ -39,11 +39,13 @@ export const Contacto = () => {
               description={
                 "Avenida Francisco de Miranda, Caracas 1060, Miranda, Venezuela"
               }
+              border
             />
             <CardsContacto
               icono={"bi bi-phone"}
               title={"Teléfono"}
               description={" Telf: +58 414-1203262 "}
+              border
             />
             <CardsContacto
               icono={"bi bi-envelope"}
@@ -53,7 +55,11 @@ export const Contacto = () => {
           </Row>
           <div>
             <GoogleMap
-              mapContainerStyle={{ width: "100%", height: "10rem" }}
+              mapContainerStyle={{
+                width: "100%",
+                height: "30rem",
+                zIndex: "99",
+              }}
               zoom={14}
               center={center}
             >

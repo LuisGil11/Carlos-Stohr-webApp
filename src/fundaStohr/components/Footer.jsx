@@ -14,28 +14,43 @@ export const Footer = () => {
                 Cronista Gráfico de la Isla de Margarita, Venezuela.
               </p>
               <div className="footer-icons">
-                <i className="bi bi-facebook"></i>
-                <i className="bi bi-twitter-x"></i>
-                <i className="bi bi-instagram"></i>
+                <a
+                  className="ps-2 "
+                  href="https://www.facebook.com/fundastohr/"
+                >
+                  <i className="bi bi-facebook"></i>
+                </a>
+                <a
+                  className="ps-2"
+                  href="https://twitter.com/fundastohr?lang=es"
+                >
+                  <i className="bi bi-twitter-x"></i>
+                </a>
+                <a
+                  className="ps-2"
+                  href="https://www.instagram.com/fundastohr/?hl=es"
+                >
+                  <i className="bi bi-instagram"></i>
+                </a>
               </div>
             </div>
-            <div className=" col-md-5 col-lg-4 col-12  ft-2 " >
+            <div className=" col-md-5 col-lg-4 col-12  ft-2 ">
               <h4> Enlaces Rápidos </h4>
               <ul>
-              <li className="nav-items">
-                <i className="bi bi-chevron-right  footer-icon-style"></i>
+                <li className="nav-items">
+                  <i className="bi bi-chevron-right  footer-icon-style"></i>
                   <a className="" href="/">
                     La Fundación
                   </a>
                 </li>
                 <li className="nav-items">
-                <i className="bi bi-chevron-right  footer-icon-style"></i>
+                  <i className="bi bi-chevron-right  footer-icon-style"></i>
                   <a className="" href="/">
                     Concursos
                   </a>
                 </li>
                 <li className="nav-items">
-                <i className="bi bi-chevron-right  footer-icon-style"></i>
+                  <i className="bi bi-chevron-right  footer-icon-style"></i>
                   <a className="" href="/">
                     Exposiciones
                   </a>
@@ -55,7 +70,7 @@ export const Footer = () => {
                 <li className="nav-items">
                   <i className="bi bi-chevron-right footer-icon-style"></i>
                   <a className="" href="/">
-                    Apóyanos 
+                    Apóyanos
                   </a>
                 </li>
               </ul>

@@ -39,7 +39,7 @@ export const InicioPage = () => {
             </a>
             <a
               className="animate__animated animate__bounce ps-2"
-              href="fundacion.carlos.stohr@gmail.com"
+              href="mailto:fundacion.carlos.stohr@gmail.com"
             >
               <i className="bi bi-envelope-fill"></i>
             </a>

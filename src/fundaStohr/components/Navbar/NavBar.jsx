@@ -45,7 +45,11 @@ export const NavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar" className="justify-content-end">
-          <Nav id="navbar" className="ms-auto navbarItem navbar">
+          <Nav
+            id="navbar"
+            className="ms-auto navbarItem navbar"
+            style={{ fontFamily: '"Madimi One", sans-serif' }}
+          >
             <Nav.Link
               href="/la-fundacion"
               className={`${

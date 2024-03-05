@@ -109,15 +109,40 @@
 .talleres .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #cda45e;
+  color: #002b5e;
 }
 
-.talleres p,
-.talleres li,
+.talleres li {
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  text-align: justify;
+  font-size: 20px;
+}
+
 .talleres h2 {
-  color: #0f2f5781;
+  color: #002b5e !important;
 }
 
 .talleres .talleres-img:hover {
   transform: scale(1.03);
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%%23ff0000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%%23ff0000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #002b5e !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  visibility: hidden;
 }

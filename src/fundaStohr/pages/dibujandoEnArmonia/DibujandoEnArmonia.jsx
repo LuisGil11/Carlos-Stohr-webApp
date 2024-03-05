@@ -10,34 +10,15 @@ import { DoubleTitle } from "../../components/DoubleTitle/DoubleTitle";
 
 export const DibujandoEnArmonia = () => {
   return (
-    <div className="pt-5">
-      <FadedTitle title="Dibujando en Armonía" />
-      {/* <div
-        style={{
-          padding: "8rem 2rem",
-          marginBottom: "2rem",
-          marginTop: "2rem",
-          backgroundColor: "#e9ecef",
-          borderRadius: "0.3rem",
-        }}
-      >
+    <div id="dibujando" className="pt-5">
+      <Container>
+        <FadedTitle title="Dibujando en Armonía" />
+      </Container>
+      <div>
         <Container>
-          <h1
-            style={{
-              fontSize: "4.5rem",
-              fontWeight: "300",
-              lineHeight: "1.2",
-            }}
-          >
-            Dibujando En Armonía
-          </h1>
-          <hr
-            className="text-black d-none d-sm-block"
-            style={pageStyles.divider}
-          />
           <Row>
-            <Col style={pageStyles.col} className="col-xl-6 col-lg-12">
-              <p style={pageStyles.text}>
+            <Col className="col-xl-6 col-lg-12">
+              <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: "20px", textAlign: "justify", textIndent: "30px", fontWeight: "500"}}>
                 La Fundación Carlos Stohr en busca de actividades para el
                 desarrollo artístico y cultural, en especial del Estado Nueva
                 Esparta, se inspira en el trabajo realizado por un grupo de
@@ -52,8 +33,8 @@ export const DibujandoEnArmonia = () => {
               </p>
             </Col>
             <Col>
-              <q style={{ fontStyle: "italic", fontSize: "20px" }}>
-                Nosotros dibujamos para extraer la magia de las cosas que nos
+              <p style={{ fontStyle: "italic", fontSize: "20px", textAlign: "justify", fontFamily: "'Raleway', sans-serif", fontWeight: "600"}}>
+                "Nosotros dibujamos para extraer la magia de las cosas que nos
                 rodean; La finalidad primordial de CIRDINE es hacernos magos,
                 convertirnos en taumaturgos para que con los trazos de grafito,
                 tinta o acuarela, insuflemos al papel un alma para que viva. Nos
@@ -63,8 +44,8 @@ export const DibujandoEnArmonia = () => {
                 faenas y la ondulante cabellera de los cocoteros acariciada por
                 el dulce aire de nuestra isla. En verdad, todos somos magos y
                 esta magia se hace realidad cuando nos dejamos atrapar por el
-                increíble placer de dibujar…
-              </q>
+                increíble placer de dibujar…"
+              </p>
               <hr style={pageStyles.divider} />
               <h6
                 style={{
@@ -78,8 +59,8 @@ export const DibujandoEnArmonia = () => {
             </Col>
           </Row>
         </Container>
-      </div> */}
-      <Container style={pageStyles.container}>
+      </div> 
+      <Container>
         <Row className="pt-5 d-flex justify-content-center sobreNosotros sobreNosotros-cols">
           <SobreNosotrosCard
             title="Talleres de Dibujos"

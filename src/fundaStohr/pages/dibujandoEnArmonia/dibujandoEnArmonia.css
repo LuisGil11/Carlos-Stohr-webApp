@@ -1,3 +1,30 @@
+#dibujando {
+  background: url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Margarita%2Fmar.jpg?alt=media&token=7a0864d5-c2ae-4176-a960-f2ccc0da8377)
+    center top no-repeat fixed;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+  position: relative;
+  background-position: center;
+  height: 60vh;
+}
+
+#dibujando::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.651);
+  z-index: 9;
+}
+
+#dibujando .container {
+  position: relative;
+  z-index: 10;
+}
+
+
 .tda {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Margarita%2FISLAS-MARGARITA-transformed.jpeg?alt=media&token=430fd4f4-3177-4887-8acc-7f012a4076a9)

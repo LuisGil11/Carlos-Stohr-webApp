@@ -14,6 +14,28 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
+@media (max-width: 992px) {
+  .navbar.header-scrolled a:hover,
+  .navbar.header-scrolled .active,
+  .navbar.header-scrolled .active:focus,
+  .navbar.header-scrolled li:hover > a {
+    background: #002b5e !important;
+    font-weight: 500 !important;
+    font-size: 17px !important;
+  }
+  .navbar.header-scrolled .nav-link:hover,
+  .navbar.header-scrolled .nav-link.active {
+    color: #fff !important;
+    font-weight: 500 !important;
+    font-size: 17px !important;
+  }
+  .navbar.header-scrolled .nav-link {
+    color: #002b5e !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+  }
+}
+
 .header-mobile {
   background: rgba(0, 0, 0, 0.7);
 }
@@ -69,6 +91,7 @@ span.navbar-toggler-icon {
   color: #ffffff;
   font-size: 17px;
 }
+
 .navbar.header-scrolled .nav-link:hover,
 .navbar.header-scrolled .nav-link.active {
   color: #002b5e;

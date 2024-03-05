@@ -17,8 +17,16 @@ export const DibujandoEnArmonia = () => {
       <div>
         <Container>
           <Row>
-            <Col style={pageStyles.col} className="col-xl-6 col-lg-12">
-              <p>
+            <Col className="col-xl-6 col-lg-12">
+              <p
+                style={{
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: "20px",
+                  textAlign: "justify",
+                  textIndent: "30px",
+                  fontWeight: "500",
+                }}
+              >
                 La Fundación Carlos Stohr en busca de actividades para el
                 desarrollo artístico y cultural, en especial del Estado Nueva
                 Esparta, se inspira en el trabajo realizado por un grupo de
@@ -257,18 +265,17 @@ export const DibujandoEnArmonia = () => {
         </div>
       </Row>
       <Row>
-        <div id="talleres" className="talleres">
-          <Container style={{ position: "relative" }}></Container>
-        </div>
-      </Row>
-      <Row>
+        {/* <Col
+              style={pageStyles.col}
+              className="col-xl-6 col-lg-12 d-flex justify-content-center"
+            ></Col> */}
         <Col style={pageStyles.col} className="col-xl-12 col-lg-12">
           <h1 style={pageStyles.title}>Encuentros al aire libre</h1>
           <hr
             className="text-black d-none d-sm-block"
             style={pageStyles.divider}
           />
-          <p>
+          <p style={pageStyles.text}>
             Los Encuentros al aire libre de Dibujando en Armonía son actividades
             para promover el dibujo urbano, la conexión con una ciudad, un
             pueblo, su gente y todo aquello que nos identifica en cada región.
@@ -307,7 +314,7 @@ export const DibujandoEnArmonia = () => {
               >
                 Dibujando en Armonía en Pampatar, Isla de Margarita
               </h4>
-              <p>
+              <p style={pageStyles.text}>
                 Fundastohr, su directora de arte la artista Lissette Villamizar
                 y los artistas Gustavo Fernández y Miguel Armando Ávila
                 promueven junto al grupo de artistas de dibujo que participaron

@@ -14,7 +14,7 @@ export const LaFundacion = () => {
     <>
       <div id="sobreNosotros" className="sobreNosotros-cols">
         <Container className="sobreNosotros">
-          <Row>
+          <Row className="animate__animated animate__zoomIn">
             <FadedTitle title="Sobre Nosotros" />
             <p
               style={{

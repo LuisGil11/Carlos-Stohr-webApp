@@ -2,7 +2,6 @@ import React from "react";
 import { Carousel, CarouselItem, Col, Container, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
-import { ImageWrapper } from "../../components/imageWrapper/ImageWrapper";
 import { SobreNosotrosCard } from "../../components/sobreNosotrosCard/SobreNosotrosCard";
 import { FadedTitle } from "../../components/FadedTitle/FadedTitle";
 import "./dibujandoEnArmonia.css";
@@ -10,7 +9,10 @@ import { DoubleTitle } from "../../components/DoubleTitle/DoubleTitle";
 
 export const DibujandoEnArmonia = () => {
   return (
-    <div id="dibujando" className="pt-5">
+    <div
+      id="dibujando"
+      className="pt-5 animate__animated animate__slideInRight"
+    >
       <Container>
         <FadedTitle title="Dibujando en Armonía" />
       </Container>

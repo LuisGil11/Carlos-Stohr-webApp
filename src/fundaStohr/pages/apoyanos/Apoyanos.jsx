@@ -9,7 +9,7 @@ import { DescriptionBox } from "../../components/DescriptionBox/DescriptionBox";
 export const Apoyanos = () => {
   return (
     <div id="Apoyanos">
-      <Container className="d-flex justify-content-center pt-5">
+      <Container className="d-flex justify-content-center pt-5 animate__animated animate__zoomIn">
         <Row className="gy-4 expo-item">
           <DoubleTitle title={"support us"} subtitle={"apóyanos"} />
           <h1 className="apoyanos-title">
@@ -53,7 +53,7 @@ export const Apoyanos = () => {
         </Row>
       </Container>
       <div style={{ backgroundColor: "#f2f6fa" }}>
-        <Container className="d-flex justify-content-center">
+        <Container className="d-flex justify-content-center animate__animated animate__slideInUp">
           <Row className="gy-4 expo-item justify-content-between align-items-stretch">
             <Row className="d-flex justify-content-center box-apoyanos">
               <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">

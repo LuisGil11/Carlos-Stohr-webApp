@@ -29,7 +29,7 @@ export const Contacto = () => {
   return (
     <Row>
       <div id="Contacto">
-        <Container>
+        <Container className="animate__animated animate__slideInRight">
           <DoubleTitle title={"contact"} subtitle={"contáctanos"} />
 
           <Row id="contact" className="contact-info">

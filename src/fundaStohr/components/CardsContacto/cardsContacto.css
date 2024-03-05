@@ -2,9 +2,17 @@
   margin-bottom: 30px;
 }
 
-#contact .border-right {
-  border-right: 1px solid #0f2f5781;
-  height: 15rem;
+@media (max-width: 768px) {
+  #contact .border-right {
+    border-bottom: 1px solid #0f2f5781;
+    height: 15rem;
+  }
+}
+@media (min-width: 768px) {
+  #contact .border-right {
+    border-right: 1px solid #0f2f5781;
+    height: 15rem;
+  }
 }
 
 #contact.contact-info {

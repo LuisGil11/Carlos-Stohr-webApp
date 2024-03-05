@@ -5,10 +5,16 @@ import "./exposiciones.css";
 
 export const Exposiciones = () => {
   return (
-    <div id="exposiciones" className="exposiciones">
-      <Container style={{ marginTop: "8rem" }}>
-        <h2 className="title d-flex justify-content-center">Exposiciones</h2>
-      </Container>
+    <div
+      id="exposiciones"
+      className="exposiciones animate__animated animate__fadeInUp"
+    >
+      <h2
+        className="title d-flex justify-content-center"
+        style={{ marginTop: "8rem", zIndex: "99" }}
+      >
+        Exposiciones
+      </h2>
       <Container className="d-flex justify-content-center pt-5">
         <Row className="gy-4 expo-item">
           <Col lg={5}>

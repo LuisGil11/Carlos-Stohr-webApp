@@ -16,7 +16,10 @@ export const Concursos = () => {
   return (
     <>
       <div id="concursos">
-        <Container style={{ marginTop: "8rem" }}>
+        <Container
+          style={{ marginTop: "8rem" }}
+          className="animate__animated animate__fadeInUp"
+        >
           <h2 className="title d-flex justify-content-center">Concursos</h2>
           <p
             style={{
@@ -38,12 +41,9 @@ export const Concursos = () => {
           </p>
         </Container>
       </div>
-      <Container className="py-5">
+      <Container className="py-5 animate__animated animate__fadeInUp">
         <Row id="SobreNosotros">
-          <Col
-            style={pageStyles.col}
-            className="animate__animated animate__fadeIn"
-          >
+          <Col style={pageStyles.col}>
             <Row>
               <div className="tabs col-lg-4 mb-5 mb-lg-0">
                 {tiposDeConcursos.map((tipo) => (

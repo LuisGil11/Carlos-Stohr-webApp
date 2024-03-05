@@ -116,25 +116,7 @@ export const DibujandoEnArmonia = () => {
             <Carousel>
               <CarouselItem style={{ minHeight: "60rem" }}>
                 <Row className="pt5">
-                  <Col lg={6} className="content">
-                    <DoubleTitle
-                      subtitle="Taller pastel al Óleo"
-                      title="Compartir el Arte del Dibujo"
-                    />
-                    <p
-                      style={{
-                        fontFamily: '"Raleway", sans-serif',
-                        fontWeight: "bold",
-                        fontSize: "20px",
-                        textIndent: "30px",
-                        textAlign: "justify",
-                      }}
-                    >
-                      Fundastohr inicia este 2021 con un Taller de Pastel al
-                      Óleo donde participaron los artistas que se destacaron en
-                      las actividades realizadas desde nuestra creación en el
-                      2019.
-                    </p>
+                  <Col lg={6} className="content pt-5">
                     <ul>
                       <li>
                         <i class="bi bi-check-circle"></i> Fueron 16 artistas
@@ -177,7 +159,25 @@ export const DibujandoEnArmonia = () => {
                       medidas sanitaria por Pandemia Covid 19).
                     </p>
                   </Col>
-                  <Col lg={6} className="d-flex align-items-center">
+                  <Col lg={6} className="align-items-center">
+                    <DoubleTitle
+                      subtitle="Taller pastel al Óleo"
+                      title="Compartir el Arte del Dibujo"
+                    />
+                    <p
+                      style={{
+                        fontFamily: '"Raleway", sans-serif',
+                        fontWeight: "bold",
+                        fontSize: "20px",
+                        textIndent: "30px",
+                        textAlign: "justify",
+                      }}
+                    >
+                      Fundastohr inicia este 2021 con un Taller de Pastel al
+                      Óleo donde participaron los artistas que se destacaron en
+                      las actividades realizadas desde nuestra creación en el
+                      2019.
+                    </p>
                     <div className="talleres-img">
                       <img
                         src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Talleres%2FExpo_Pastel_al_oleo-transformed.webp?alt=media&token=e26b39fd-c0d4-4879-9fde-1b053ac0f59c"
@@ -189,15 +189,7 @@ export const DibujandoEnArmonia = () => {
               </CarouselItem>
               <CarouselItem style={{ minHeight: "60rem" }}>
                 <Row className="pb-5">
-                  <Col lg={6} className="d-flex align-items-center">
-                    <div className="talleres-img">
-                      <img
-                        src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Talleres%2FTalleres2.jpg?alt=media&token=e2fc8a1b-27c3-4caf-8f66-95d9f14dcc46"
-                        alt=""
-                      />
-                    </div>
-                  </Col>
-                  <Col lg={6} className="content">
+                  <Col lg={6} className="align-items-center">
                     <DoubleTitle
                       subtitle="Taller de Dibujo y Perspectiva para niños"
                       title="Compartir el Arte del Dibujo"
@@ -216,6 +208,14 @@ export const DibujandoEnArmonia = () => {
                       infantil que se destacaron en las actividades realizadas
                       desde nuestra creación en el 2019.
                     </p>
+                    <div className="talleres-img">
+                      <img
+                        src="https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Talleres%2FTalleres2.jpg?alt=media&token=e2fc8a1b-27c3-4caf-8f66-95d9f14dcc46"
+                        alt=""
+                      />
+                    </div>
+                  </Col>
+                  <Col lg={6} className="content pt-5">
                     <ul>
                       <li>
                         <i class="bi bi-check-circle"></i> Fueron invitados 12

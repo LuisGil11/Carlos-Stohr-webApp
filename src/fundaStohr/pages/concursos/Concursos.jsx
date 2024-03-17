@@ -1,16 +1,25 @@
 import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
 import { Tab } from "../../components/Tab/Tab";
 import { tiposDeConcursos } from "../../data/infoConcursos";
 import { TabContent } from "../../components/Tab/TabContent";
 import "./concursos.css";
+import { ConcursoModal } from "../../components/nuevoConcursoModal/ConcursoModal";
+import { onCloseModal, onOpenModal } from "../../../store/ui/uiSlice";
+import { useDispatch } from "react-redux";
 
 export const Concursos = () => {
   const [currentTab, setCurrentTab] = useState("alAireLibre");
+  const [show, setShow] = useState(false);
+  const dispatch = useDispatch();
   const handleTab = (id) => {
     setCurrentTab(id);
+  };
+
+  const handleOpen = () => {
+    dispatch(onOpenModal());
   };
 
   return (
@@ -63,6 +72,10 @@ export const Concursos = () => {
             </Row>
           </Col>
         </Row>
+        <div className="d-flex justify-content-end">
+          <Button onClick={handleOpen}>Añadir Concurso</Button>
+        </div>
+        <ConcursoModal />
       </Container>
       <Footer />
     </>

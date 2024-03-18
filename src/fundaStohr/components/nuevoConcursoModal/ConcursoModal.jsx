@@ -1,16 +1,29 @@
 import React, { useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import {
+  Button,
+  Form,
+  FormControl,
+  FormLabel,
+  FormText,
+  Modal,
+} from "react-bootstrap";
 import { useForm } from "../../../hooks/useForm";
 import { onCloseModal } from "../../../store/ui/uiSlice";
 import { useDispatch, useSelector } from "react-redux";
+import DatePicker, { registerLocale } from "react-datepicker";
+import { es } from "date-fns/locale/es";
+import { addHours } from "date-fns";
+import "react-datepicker/dist/react-datepicker.css";
+
+registerLocale("es", es);
 
 const initialForm = {
   categoria: "",
   subcategoria: "",
   nombre: "",
-  fecha: "",
-  horaInicio: "",
-  horaFin: "",
+  fechaInicio: new Date(),
+  fechaFin: addHours(new Date(), 1),
+  direccion: "",
   jurado: [],
   ganadores: [],
   infoAdicional: "",
@@ -21,9 +34,10 @@ export const ConcursoModal = () => {
     categoria,
     subcategoria,
     nombre,
-    fecha,
-    horaInicio,
-    horaFin,
+    fechaInicio,
+    fechaFin,
+    direccion,
+    edicion,
     jurado,
     ganadores,
     infoAdicional,
@@ -53,7 +67,23 @@ export const ConcursoModal = () => {
       <Modal.Body>
         <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Categoría</Form.Label>
+            <Form.Label>Nombre (opcional)</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="nombre del concurso"
+              onChange={onInputChange}
+              value={nombre}
+              name="nombre"
+            />
+            <Form.Label className="mt-2">Edición</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="año"
+              onChange={onInputChange}
+              value={edicion}
+              name="edicion"
+            />
+            <Form.Label className="mt-2">Categoría</Form.Label>
             <Form.Select
               onChange={onInputChange}
               value={categoria}
@@ -92,6 +122,43 @@ export const ConcursoModal = () => {
                 </Form.Select>
               </>
             )}
+            <div className="form-group mb-2 mt-2">
+              <FormLabel className="col-6">Fecha y hora inicio</FormLabel>
+              <DatePicker
+                selected={fechaInicio}
+                onChange={(event) => onDateChange(event, "fechaInicio")}
+                className="form-control col-6"
+                dateFormat="Pp"
+                showTimeSelect
+                locale="es"
+                timeCaption="Hora"
+              />
+            </div>
+
+            <div className="form-group mb-2">
+              <FormLabel className="col-6">Fecha y hora fin</FormLabel>
+              <DatePicker
+                selected={fechaFin}
+                onChange={(event) => onDateChange(event, "fechaFin")}
+                className="form-control col-6"
+                dateFormat="Pp"
+                showTimeSelect
+                locale="es"
+                timeCaption="Hora"
+              />
+            </div>
+
+            <div className="form-group mb-2">
+              <FormLabel className="col-6">Ubicación</FormLabel>
+              <br />
+              <Form.Control
+                type="text"
+                placeholder="Dirección del evento"
+                name="direccion"
+                value={direccion}
+                onChange={onInputChange}
+              />
+            </div>
           </Form.Group>
         </Form>
       </Modal.Body>

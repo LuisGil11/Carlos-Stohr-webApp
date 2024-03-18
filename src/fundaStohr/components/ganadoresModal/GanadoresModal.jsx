@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Form, InputGroup, Modal, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { onCloseGanadoresForm } from "../../../store/concursos/concursoSlice";
+import {
+  onCloseGanadoresForm,
+  setNuevosResultados,
+} from "../../../store/concursos/concursoSlice";
 import { useForm } from "../../../hooks/useForm";
+import { startSavingResult } from "../../../store/concursos/thunks";
 
 const initialForm = {
   edicion: new Date().getFullYear(),
@@ -29,15 +33,34 @@ const initialForm = {
   },
 };
 export const GanadoresModal = () => {
-  const { isGanadoresFormOpen } = useSelector((state) => state.concurso);
+  const { isGanadoresFormOpen, isSaving } = useSelector(
+    (state) => state.concurso
+  );
 
   const dispatch = useDispatch();
-  const { edicion, categoria, onInputChange, onResetForm } =
-    useForm(initialForm);
+  const {
+    edicion,
+    infantil,
+    juvenil,
+    adulto,
+    formState,
+    onInputChange,
+    onResetForm,
+  } = useForm(initialForm);
+
+  console.log(formState);
 
   const handleClose = () => {
     dispatch(onCloseGanadoresForm());
   };
+
+  const onSaveResult = () => {
+    dispatch(startSavingResult());
+  };
+
+  useEffect(() => {
+    dispatch(setNuevosResultados(formState));
+  }, [formState]);
 
   return (
     <Modal
@@ -86,6 +109,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="infantil.primero"
+                    value={infantil.primero}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -94,6 +120,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="infantil.segundo"
+                    value={infantil.segundo}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -102,6 +131,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="infantil.tercero"
+                    value={infantil.tercero}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -112,6 +144,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="infantil.costumbrista"
+                    value={infantil.costumbrista}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -122,6 +157,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="infantil.especial"
+                    value={infantil.especial}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
               </div>
@@ -134,6 +172,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="juvenil.primero"
+                    value={juvenil.primero}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -142,6 +183,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="juvenil.segundo"
+                    value={juvenil.segundo}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -150,6 +194,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="juvenil.tercero"
+                    value={juvenil.tercero}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -160,6 +207,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="juvenil.costumbrista"
+                    value={juvenil.costumbrista}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -170,6 +220,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="juvenil.especial"
+                    value={juvenil.especial}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
               </div>
@@ -182,6 +235,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="adulto.primero"
+                    value={adulto.primero}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -190,6 +246,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="adulto.segundo"
+                    value={adulto.segundo}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -198,6 +257,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="adulto.tercero"
+                    value={adulto.tercero}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -208,6 +270,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="adulto.costumbrista"
+                    value={adulto.costumbrista}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -218,6 +283,9 @@ export const GanadoresModal = () => {
                     placeholder="nombre"
                     aria-label="nombre"
                     aria-describedby="basic-addon1"
+                    name="adulto.especial"
+                    value={adulto.especial}
+                    onChange={onInputChange}
                   />
                 </InputGroup>
               </div>
@@ -230,7 +298,9 @@ export const GanadoresModal = () => {
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>
-        <Button variant="primary">Save Changes</Button>
+        <Button variant="primary" disabled={isSaving} onClick={onSaveResult}>
+          Guardar
+        </Button>
       </Modal.Footer>
     </Modal>
   );

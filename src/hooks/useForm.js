@@ -20,13 +20,26 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
   }, [formValidation]);
 
   const onInputChange = ({ target }) => {
-    const { name, value } = target;
-    console.log({ name, value });
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
+    const { name = "", value } = target;
+
+    if (name.includes(".")) {
+      const [category, fieldName] = name.split(".");
+
+      setFormState((prevState) => ({
+        ...prevState,
+        [category]: {
+          ...prevState[category],
+          [fieldName]: value,
+        },
+      }));
+    } else {
+      setFormState((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    }
   };
+
   const onResetForm = () => {
     setFormState(initialForm);
   };

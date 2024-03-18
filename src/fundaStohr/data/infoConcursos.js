@@ -30,7 +30,7 @@ export const tiposDeConcursos = [
     primer trimestre del 2024.`,
     imagen:
       "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2FalAireLibre.jpeg?alt=media&token=9fbb69cf-c7a2-44a5-bcca-e9fdd67dc451",
-    id: "alAireLibre",
+    id: "fundastohr",
   },
   {
     title: "Concurso Temático",
@@ -85,6 +85,6 @@ export const tiposDeConcursos = [
 
     imagen:
       "https://firebasestorage.googleapis.com/v0/b/fundastohr-image-gallery.appspot.com/o/Fotos%20Variadas%2Factividades3.jpeg?alt=media&token=1eaa4c32-3f43-43f9-be0a-74ff313df880",
-    id: "enlinea",
+    id: "en-linea",
   },
 ];

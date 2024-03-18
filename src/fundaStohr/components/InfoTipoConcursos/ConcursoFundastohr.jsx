@@ -1,10 +1,17 @@
 import React from "react";
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import { FadedTitle } from "../FadedTitle/FadedTitle";
-import { DescriptionBox } from "../DescriptionBox/DescriptionBox";
-import { DoubleTitle } from "../DoubleTitle/DoubleTitle";
+import { useDispatch } from "react-redux";
+import { onOpenGanadoresForm } from "../../../store/concursos/concursoSlice";
+import { GanadoresModal } from "../ganadoresModal/GanadoresModal";
 
 export const ConcursoFundastohr = () => {
+  const dispatch = useDispatch();
+
+  const handleOpen = () => {
+    dispatch(onOpenGanadoresForm());
+  };
+
   return (
     <Container className="mt-5">
       <FadedTitle title="Concurso Fundastohr" />
@@ -171,6 +178,11 @@ export const ConcursoFundastohr = () => {
       </Row>
       <div className="mt-5">
         <FadedTitle title="Resultados" />
+        <div className="d-flex justify-content-end">
+          <Button onClick={handleOpen} className="mb-5">
+            Añadir resultados
+          </Button>
+        </div>
         <h3
           className="subtitleLeft"
           style={{ fontFamily: '"Oswald", sans-serif', color: "#002b5e" }}
@@ -220,6 +232,7 @@ export const ConcursoFundastohr = () => {
           </tbody>
         </Table>
       </div>
+      <GanadoresModal />
     </Container>
   );
 };

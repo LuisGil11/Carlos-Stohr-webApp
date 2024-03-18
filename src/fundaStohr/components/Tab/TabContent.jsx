@@ -3,7 +3,7 @@ import "./tab.css";
 import { useSelector } from "react-redux";
 
 export const TabContent = ({ title, desccorta, desclarga, imagen, id }) => {
-  const { tipoDeConcurso } = useSelector((state) => state.ui);
+  const { tipoDeConcurso } = useSelector((state) => state.concurso);
 
   return (
     <div

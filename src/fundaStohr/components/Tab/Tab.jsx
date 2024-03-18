@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import "./tab.css";
 
 export const Tab = ({ title, desccorta, id, handleTab }) => {
-  const { tipoDeConcurso } = useSelector((state) => state.ui);
+  const { tipoDeConcurso } = useSelector((state) => state.concurso);
 
   return (
     <ul className="nav flex-column" role="tablist">

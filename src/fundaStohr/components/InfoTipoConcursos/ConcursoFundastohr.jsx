@@ -88,18 +88,18 @@ export const ConcursoFundastohr = () => {
               residenciados en el Estado Nueva Esparta, quienes tienen
               conocimientos de la técnica del dibujo urbano. Participaron 45
               artistas dividido en tres categorías:
-              <ul
-                style={{
-                  marginBottom: "1rem",
-                  marginTop: "10px",
-                  fontFamily: "sans-serif",
-                }}
-              >
-                <li>Infantil (8 a 13 años) - 12 participantes</li>
-                <li>Juvenil (14 a 20 años) - 19 participantes</li>
-                <li>Adulto (21 años en adelante) - 14 participantes</li>
-              </ul>
             </p>
+            <ul
+              style={{
+                marginBottom: "1rem",
+                marginTop: "10px",
+                fontFamily: "sans-serif",
+              }}
+            >
+              <li>Infantil (8 a 13 años) - 12 participantes</li>
+              <li>Juvenil (14 a 20 años) - 19 participantes</li>
+              <li>Adulto (21 años en adelante) - 14 participantes</li>
+            </ul>
           </div>
         </Col>
         <Col lg={6}>
@@ -153,7 +153,7 @@ export const ConcursoFundastohr = () => {
             >
               Se realizó una exhibición temporal, con todas las obras que
               participan en el concurso, para la visualización y selección, por
-              parte del jurado el día del Concurso. ​ Las obras que obtuvieron
+              parte del jurado el día del Concurso. Las obras que obtuvieron
               puntaje por parte del jurado, se seleccionarán para ser expuestas
               en la Sala Carlos Stohr, del Museo Nueva Cádiz en la Asunción de
               la Isla de Margarita, el 2 de marzo del 2024. Las obras ganadoras

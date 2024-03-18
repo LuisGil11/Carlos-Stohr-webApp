@@ -7,17 +7,13 @@ import { tiposDeConcursos } from "../../data/infoConcursos";
 import { TabContent } from "../../components/Tab/TabContent";
 import "./concursos.css";
 import { ConcursoModal } from "../../components/nuevoConcursoModal/ConcursoModal";
-import {
-  onCloseModal,
-  onOpenModal,
-  onSetTipoDeConcurso,
-} from "../../../store/ui/uiSlice";
+import { onSetTipoDeConcurso } from "../../../store/concursos/concursoSlice";
+import { onOpenModal } from "../../../store/ui/uiSlice";
 import { useDispatch } from "react-redux";
 import { ConcursoFundastohr } from "../../components/InfoTipoConcursos/ConcursoFundastohr";
 
 export const Concursos = () => {
   const [currentTab, setCurrentTab] = useState("alAireLibre");
-  const [show, setShow] = useState(false);
   const dispatch = useDispatch();
   const handleTab = (id) => {
     setCurrentTab(id);

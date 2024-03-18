@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { isModalOpen: false };
+const initialState = { isModalOpen: false, tipoDeConcurso: "alAireLibre" };
 
 export const uiSlice = createSlice({
   name: "uiSlice",
@@ -12,7 +12,11 @@ export const uiSlice = createSlice({
     onCloseModal: (state) => {
       state.isModalOpen = false;
     },
+    onSetTipoDeConcurso: (state, { payload }) => {
+      state.tipoDeConcurso = payload;
+    },
   },
 });
 
-export const { onOpenModal, onCloseModal } = uiSlice.actions;
+export const { onOpenModal, onCloseModal, onSetTipoDeConcurso } =
+  uiSlice.actions;

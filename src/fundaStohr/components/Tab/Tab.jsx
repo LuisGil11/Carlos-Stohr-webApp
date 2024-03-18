@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import "./tab.css";
 
-export const Tab = ({ title, desccorta, id, currentTab, handleTab }) => {
+export const Tab = ({ title, desccorta, id, handleTab }) => {
+  const { tipoDeConcurso } = useSelector((state) => state.ui);
+
   return (
     <ul className="nav flex-column" role="tablist">
       <li
@@ -9,7 +12,7 @@ export const Tab = ({ title, desccorta, id, currentTab, handleTab }) => {
         onClick={() => handleTab(id)}
       >
         <a
-          className={`nav-link show ${currentTab === id ? "active" : ""}`}
+          className={`nav-link show ${tipoDeConcurso === id ? "active" : ""}`}
           data-bs-toggle="tab"
           data-bs-target={"#" + id}
           aria-selected="true"

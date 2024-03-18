@@ -13,6 +13,7 @@ import {
   onSetTipoDeConcurso,
 } from "../../../store/ui/uiSlice";
 import { useDispatch } from "react-redux";
+import { ConcursoFundastohr } from "../../components/InfoTipoConcursos/ConcursoFundastohr";
 
 export const Concursos = () => {
   const [currentTab, setCurrentTab] = useState("alAireLibre");
@@ -81,6 +82,7 @@ export const Concursos = () => {
           <Button onClick={handleOpen}>Añadir Concurso</Button>
         </div>
         <ConcursoModal />
+        <ConcursoFundastohr />
       </Container>
       <Footer />
     </>

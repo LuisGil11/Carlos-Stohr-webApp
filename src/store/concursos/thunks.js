@@ -17,8 +17,6 @@ export const startSavingResult = () => {
 
     const { nuevosResultados, tipoDeConcurso } = getState().concurso;
 
-    console.log(nuevosResultados);
-
     if (nuevosResultados.subCategoria.trim().length > 0) {
       const newCollection = collection(
         FirebaseDB,

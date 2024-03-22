@@ -1,19 +1,29 @@
-import React from "react";
 import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import { FadedTitle } from "../FadedTitle/FadedTitle";
 import { useDispatch, useSelector } from "react-redux";
 import { onOpenGanadoresForm } from "../../../store/concursos/concursoSlice";
 import { GanadoresModal } from "../ganadoresModal/GanadoresModal";
+import { startLoadingResultados } from "../../../store/concursos/thunks";
+import { useEffect } from "react";
 
 export const ConcursoFundastohr = () => {
-  const { concursos } = useSelector((state) => state.concurso);
-  console.log(concursos);
+  const { resultados } = useSelector((state) => state.concurso);
 
   const dispatch = useDispatch();
 
   const handleOpen = () => {
     dispatch(onOpenGanadoresForm());
   };
+
+  const loadResultados = () => {
+    dispatch(startLoadingResultados());
+  };
+
+  // useEffect(() => {
+  //   loadResultados();
+  // }, []);
+
+  // dispatch(startLoadingResultados());
 
   return (
     <Container className="mt-5">
@@ -234,6 +244,7 @@ export const ConcursoFundastohr = () => {
             </tr>
           </tbody>
         </Table>
+        <h1>{resultados}</h1>
       </div>
       <GanadoresModal />
     </Container>

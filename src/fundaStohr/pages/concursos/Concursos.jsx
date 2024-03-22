@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
@@ -9,13 +9,21 @@ import "./concursos.css";
 import { ConcursoModal } from "../../components/nuevoConcursoModal/ConcursoModal";
 import { onSetTipoDeConcurso } from "../../../store/concursos/concursoSlice";
 import { onOpenModal } from "../../../store/ui/uiSlice";
-import { useDispatch } from "react-redux";
-import { ConcursoFundastohr } from "../../components/InfoTipoConcursos/ConcursoFundastohr";
-import { startLoadingResultados } from "../../../store/concursos/thunks";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  ConcursoFundastohr,
+  ConcursoTematico,
+  ConcursoEnLinea,
+} from "../../components/InfoTipoConcursos";
 
 export const Concursos = () => {
   const [currentTab, setCurrentTab] = useState("alAireLibre");
+  const { tipoDeConcurso } = useSelector((state) => state.concurso);
+
+  console.log(tipoDeConcurso);
+
   const dispatch = useDispatch();
+
   const handleTab = (id) => {
     setCurrentTab(id);
     dispatch(onSetTipoDeConcurso(id));
@@ -24,10 +32,6 @@ export const Concursos = () => {
   const handleOpen = () => {
     dispatch(onOpenModal());
   };
-
-  useEffect(() => {
-    dispatch(startLoadingResultados());
-  }, []);
 
   return (
     <>
@@ -83,7 +87,9 @@ export const Concursos = () => {
           <Button onClick={handleOpen}>Añadir Concurso</Button>
         </div>
         <ConcursoModal />
-        <ConcursoFundastohr />
+        {tipoDeConcurso === "fundastohr" && <ConcursoFundastohr />}
+        {tipoDeConcurso === "tematico" && <ConcursoTematico />}
+        {tipoDeConcurso === "en-linea" && <ConcursoEnLinea />}
       </Container>
       <Footer />
     </>

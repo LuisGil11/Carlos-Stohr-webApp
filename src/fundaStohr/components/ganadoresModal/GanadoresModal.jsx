@@ -54,8 +54,6 @@ export const GanadoresModal = () => {
     onResetForm,
   } = useForm(initialForm);
 
-  console.log(formState);
-
   const handleClose = () => {
     dispatch(onCloseGanadoresForm());
   };

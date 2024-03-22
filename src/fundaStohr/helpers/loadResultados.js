@@ -1,9 +1,8 @@
-import { collection, doc, getDocs } from "firebase/firestore/lite";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore/lite";
 import { FirebaseDB } from "../../firebase/config";
 
 export const loadResultados = async () => {
-  const collectionRef = collection(FirebaseDB, "/concursos");
-  console.log(collectionRef);
+  const collectionRef = collection(FirebaseDB, "concursos/en-linea/acnur");
   const docs = await getDocs(collectionRef);
 
   console.log(docs);

@@ -3,6 +3,7 @@ import { Button, Form, InputGroup, Modal, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import {
   onCloseGanadoresForm,
+  onSetTipoDeConcurso,
   setNuevosResultados,
 } from "../../../store/concursos/concursoSlice";
 import { useForm } from "../../../hooks/useForm";
@@ -10,6 +11,8 @@ import { startSavingResult } from "../../../store/concursos/thunks";
 
 const initialForm = {
   edicion: new Date().getFullYear(),
+  tipoDeConcurso: "fundastohr",
+  subCategoria: "",
   infantil: {
     primero: "",
     segundo: "",
@@ -40,11 +43,14 @@ export const GanadoresModal = () => {
   const dispatch = useDispatch();
   const {
     edicion,
+    tipoDeConcurso,
+    subCategoria,
     infantil,
     juvenil,
     adulto,
     formState,
     onInputChange,
+    onResetInput,
     onResetForm,
   } = useForm(initialForm);
 
@@ -56,6 +62,12 @@ export const GanadoresModal = () => {
 
   const onSaveResult = () => {
     dispatch(startSavingResult());
+  };
+
+  const onChangeConcurso = (event) => {
+    onInputChange(event);
+    onResetInput("subCategoria");
+    dispatch(onSetTipoDeConcurso(event.target.value));
   };
 
   useEffect(() => {
@@ -76,6 +88,45 @@ export const GanadoresModal = () => {
       <Modal.Body>
         <Form>
           <Form.Group>
+            <Form.Label className="mt-2">Categoría</Form.Label>
+            <Form.Select
+              onChange={onChangeConcurso}
+              value={tipoDeConcurso}
+              name="tipoDeConcurso"
+            >
+              <option disabled value="">
+                {" "}
+                -- selecciona una opción --{" "}
+              </option>
+              <option value="fundastohr">
+                Concurso Fundastohr "Al aire libre"
+              </option>
+              <option value="tematico">Temático</option>
+              <option value="en-linea">En línea</option>
+            </Form.Select>
+            {tipoDeConcurso === "en-linea" && (
+              <>
+                <br />
+                <Form.Label>Sub - Categoría</Form.Label>
+                <Form.Select
+                  placeholder="introduzca la categoría del concurso"
+                  autoFocus
+                  onChange={onInputChange}
+                  value={subCategoria}
+                  name="subCategoria"
+                >
+                  <option disabled value="">
+                    {" "}
+                    -- selecciona una opción --{" "}
+                  </option>
+                  <option value="dibujo-urbano">Dibujo Urbano Venezuela</option>
+                  <option value="acnur">ACNUR</option>
+                  <option value="proteccion-y-devocion">
+                    Protección y Devoción
+                  </option>
+                </Form.Select>
+              </>
+            )}
             <Form.Label>Edición</Form.Label>
             <Form.Control
               className="mb-3"
@@ -85,20 +136,6 @@ export const GanadoresModal = () => {
               value={edicion}
               name="edicion"
             />
-            {/* <Form.Select
-              className="mb-3"
-              onChange={onInputChange}
-              value={categoria}
-              name="categoria"
-            >
-              <option disabled value="">
-                {" "}
-                -- selecciona una opción --{" "}
-              </option>
-              <option value="infantil">Infantil</option>
-              <option value="juvenil">Juvenil</option>
-              <option value="adulto">Adulto</option>
-            </Form.Select> */}
             <Row>
               <div className="col-4">
                 <h3 className="d-flex justify-content-center">Infantil</h3>

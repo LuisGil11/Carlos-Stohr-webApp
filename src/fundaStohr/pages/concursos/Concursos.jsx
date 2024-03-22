@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
@@ -11,6 +11,7 @@ import { onSetTipoDeConcurso } from "../../../store/concursos/concursoSlice";
 import { onOpenModal } from "../../../store/ui/uiSlice";
 import { useDispatch } from "react-redux";
 import { ConcursoFundastohr } from "../../components/InfoTipoConcursos/ConcursoFundastohr";
+import { startLoadingResultados } from "../../../store/concursos/thunks";
 
 export const Concursos = () => {
   const [currentTab, setCurrentTab] = useState("alAireLibre");
@@ -23,6 +24,10 @@ export const Concursos = () => {
   const handleOpen = () => {
     dispatch(onOpenModal());
   };
+
+  useEffect(() => {
+    dispatch(startLoadingResultados());
+  }, []);
 
   return (
     <>

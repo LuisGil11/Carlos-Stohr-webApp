@@ -1,11 +1,14 @@
 import React from "react";
 import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import { FadedTitle } from "../FadedTitle/FadedTitle";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { onOpenGanadoresForm } from "../../../store/concursos/concursoSlice";
 import { GanadoresModal } from "../ganadoresModal/GanadoresModal";
 
 export const ConcursoFundastohr = () => {
+  const { concursos } = useSelector((state) => state.concurso);
+  console.log(concursos);
+
   const dispatch = useDispatch();
 
   const handleOpen = () => {

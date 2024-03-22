@@ -40,6 +40,25 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
     }
   };
 
+  const onResetInput = (name) => {
+    if (name.includes(".")) {
+      const [category, fieldName] = name.split(".");
+
+      setFormState((prevState) => ({
+        ...prevState,
+        [category]: {
+          ...prevState[category],
+          [fieldName]: "",
+        },
+      }));
+    } else {
+      setFormState((prevState) => ({
+        ...prevState,
+        [name]: "",
+      }));
+    }
+  };
+
   const onResetForm = () => {
     setFormState(initialForm);
   };
@@ -62,6 +81,7 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
     formState,
     onInputChange,
     onResetForm,
+    onResetInput,
     ...formValidation,
     isFormValid,
   };

@@ -40,6 +40,10 @@ export const concursoSlice = createSlice({
       state.resultados.push(payload);
     },
 
+    setResultados: (state, action) => {
+      state.notes = action.payload;
+    },
+
     setSaving: (state) => {
       state.isSaving = true;
     },
@@ -63,4 +67,5 @@ export const {
   addNuevosResultados,
   setSaving,
   resultadosUpdated,
+  setResultados,
 } = concursoSlice.actions;

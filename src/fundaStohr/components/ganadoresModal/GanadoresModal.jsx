@@ -7,7 +7,10 @@ import {
   setNuevosResultados,
 } from "../../../store/concursos/concursoSlice";
 import { useForm } from "../../../hooks/useForm";
-import { startSavingResult } from "../../../store/concursos/thunks";
+import {
+  startDeletingResult,
+  startSavingResult,
+} from "../../../store/concursos/thunks";
 
 export const GanadoresModal = () => {
   const {
@@ -19,6 +22,7 @@ export const GanadoresModal = () => {
   const dispatch = useDispatch();
   const {
     edicion,
+    id,
     tipoDeConcurso,
     subCategoria,
     infantil,
@@ -38,13 +42,16 @@ export const GanadoresModal = () => {
     dispatch(startSavingResult());
     onResetForm();
     dispatch(onCloseGanadoresForm());
-    dispatch;
   };
 
   const onChangeConcurso = (event) => {
     onInputChange(event);
     onResetInput("subCategoria");
     dispatch(onSetTipoDeConcurso(event.target.value));
+  };
+
+  const onDeleteResult = () => {
+    dispatch(startDeletingResult());
   };
 
   useEffect(() => {
@@ -309,6 +316,11 @@ export const GanadoresModal = () => {
       </Modal.Body>
 
       <Modal.Footer>
+        {id && (
+          <Button variant="danger" onClick={onDeleteResult}>
+            Eliminar Resultado
+          </Button>
+        )}
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>

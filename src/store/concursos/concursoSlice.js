@@ -9,6 +9,7 @@ const initialState = {
   nuevosResultados: null,
   formState: {
     edicion: new Date().getFullYear(),
+    id: null,
     tipoDeConcurso: "fundastohr",
     subCategoria: "",
     infantil: {
@@ -58,6 +59,7 @@ export const concursoSlice = createSlice({
       state.isGanadoresFormOpen = false;
       state.formState = {
         edicion: new Date().getFullYear(),
+        id: null,
         tipoDeConcurso: "fundastohr",
         subCategoria: "",
         infantil: {
@@ -101,6 +103,13 @@ export const concursoSlice = createSlice({
     setSaving: (state) => {
       state.isSaving = true;
     },
+
+    resultadoDeleted: (state) => {
+      state.resultados = state.resultados.filter(
+        (resultado) => resultado.id !== state.nuevosResultados.id
+      );
+    },
+
     resultadosUpdated: (state, { payload }) => {
       state.isSaving = false;
       state.resultados = state.resultados.map((resultado) => {
@@ -124,6 +133,7 @@ export const {
   setNuevosResultados,
   addNuevosResultados,
   setSaving,
+  resultadoDeleted,
   resultadosUpdated,
   setResultados,
   onSetFormState,

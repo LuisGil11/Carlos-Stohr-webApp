@@ -199,7 +199,11 @@ export const ConcursoFundastohr = () => {
         </div>
 
         {resultados.map((resultado) => (
-          <TablaResultados key={resultado.id} {...resultado} />
+          <TablaResultados
+            key={resultado.id}
+            {...resultado}
+            resultado={resultado}
+          />
         ))}
       </div>
       <GanadoresModal />

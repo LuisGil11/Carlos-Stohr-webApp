@@ -9,36 +9,12 @@ import {
 import { useForm } from "../../../hooks/useForm";
 import { startSavingResult } from "../../../store/concursos/thunks";
 
-const initialForm = {
-  edicion: new Date().getFullYear(),
-  tipoDeConcurso: "fundastohr",
-  subCategoria: "",
-  infantil: {
-    primero: "",
-    segundo: "",
-    tercero: "",
-    costumbrista: "",
-    especial: "",
-  },
-  juvenil: {
-    primero: "",
-    segundo: "",
-    tercero: "",
-    costumbrista: "",
-    especial: "",
-  },
-  adulto: {
-    primero: "",
-    segundo: "",
-    tercero: "",
-    costumbrista: "",
-    especial: "",
-  },
-};
 export const GanadoresModal = () => {
-  const { isGanadoresFormOpen, isSaving } = useSelector(
-    (state) => state.concurso
-  );
+  const {
+    formState: GanadoresFormState,
+    isGanadoresFormOpen,
+    isSaving,
+  } = useSelector((state) => state.concurso);
 
   const dispatch = useDispatch();
   const {
@@ -52,7 +28,7 @@ export const GanadoresModal = () => {
     onInputChange,
     onResetInput,
     onResetForm,
-  } = useForm(initialForm);
+  } = useForm(GanadoresFormState);
 
   const handleClose = () => {
     dispatch(onCloseGanadoresForm());
@@ -61,6 +37,8 @@ export const GanadoresModal = () => {
   const onSaveResult = () => {
     dispatch(startSavingResult());
     onResetForm();
+    dispatch(onCloseGanadoresForm());
+    dispatch;
   };
 
   const onChangeConcurso = (event) => {

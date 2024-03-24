@@ -7,6 +7,32 @@ const initialState = {
   infoConcurso: null,
   resultados: [],
   nuevosResultados: null,
+  formState: {
+    edicion: new Date().getFullYear(),
+    tipoDeConcurso: "fundastohr",
+    subCategoria: "",
+    infantil: {
+      primero: "",
+      segundo: "",
+      tercero: "",
+      costumbrista: "",
+      especial: "",
+    },
+    juvenil: {
+      primero: "",
+      segundo: "",
+      tercero: "",
+      costumbrista: "",
+      especial: "",
+    },
+    adulto: {
+      primero: "",
+      segundo: "",
+      tercero: "",
+      costumbrista: "",
+      especial: "",
+    },
+  },
 };
 
 // concursos: [
@@ -30,6 +56,32 @@ export const concursoSlice = createSlice({
 
     onCloseGanadoresForm: (state) => {
       state.isGanadoresFormOpen = false;
+      state.formState = {
+        edicion: new Date().getFullYear(),
+        tipoDeConcurso: "fundastohr",
+        subCategoria: "",
+        infantil: {
+          primero: "",
+          segundo: "",
+          tercero: "",
+          costumbrista: "",
+          especial: "",
+        },
+        juvenil: {
+          primero: "",
+          segundo: "",
+          tercero: "",
+          costumbrista: "",
+          especial: "",
+        },
+        adulto: {
+          primero: "",
+          segundo: "",
+          tercero: "",
+          costumbrista: "",
+          especial: "",
+        },
+      };
     },
 
     setNuevosResultados: (state, { payload }) => {
@@ -58,6 +110,10 @@ export const concursoSlice = createSlice({
         return resultado;
       });
     },
+    onSetFormState: (state, { payload }) => {
+      console.log(payload);
+      state.formState = payload;
+    },
   },
 });
 
@@ -70,4 +126,5 @@ export const {
   setSaving,
   resultadosUpdated,
   setResultados,
+  onSetFormState,
 } = concursoSlice.actions;

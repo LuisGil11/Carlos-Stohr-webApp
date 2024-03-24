@@ -1,7 +1,26 @@
 import React from "react";
 import { Table } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import {
+  onOpenGanadoresForm,
+  onSetFormState,
+} from "../../../store/concursos/concursoSlice";
 
-export const TablaResultados = ({ edicion, adulto, infantil, juvenil, id }) => {
+export const TablaResultados = ({
+  resultado,
+  edicion,
+  adulto,
+  infantil,
+  juvenil,
+  id,
+}) => {
+  const dispatch = useDispatch();
+
+  const onUpdateResultado = () => {
+    dispatch(onSetFormState(resultado));
+    dispatch(onOpenGanadoresForm());
+  };
+
   return (
     <>
       <h3
@@ -10,7 +29,7 @@ export const TablaResultados = ({ edicion, adulto, infantil, juvenil, id }) => {
       >
         {edicion}
       </h3>
-      <Table striped bordered hover key={id}>
+      <Table striped bordered hover key={id} onDoubleClick={onUpdateResultado}>
         <thead>
           <tr>
             <th>Posición</th>

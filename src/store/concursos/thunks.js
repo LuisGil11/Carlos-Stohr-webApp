@@ -54,17 +54,22 @@ export const startDeletingResult = () => {
     const { id, subCategoria } = nuevosResultados;
     let path = "";
 
-    if (nuevosResultados.subCategoria.trim().length > 0) {
-      path = `concursos/${tipoDeConcurso}/${subCategoria}`;
-    } else {
-      path = `concursos/${tipoDeConcurso}/${tipoDeConcurso}`;
+    try {
+      if (nuevosResultados.subCategoria.trim().length > 0) {
+        path = `concursos/${tipoDeConcurso}/${subCategoria}`;
+      } else {
+        path = `concursos/${tipoDeConcurso}/${tipoDeConcurso}`;
+      }
+
+      const coleccion = collection(FirebaseDB, path);
+
+      const docToDelete = doc(coleccion, id.toString());
+
+      await deleteDoc(docToDelete);
+      dispatch(resultadoDeleted());
+      dispatch(onCloseGanadoresForm());
+    } catch (error) {
+      console.log(error);
     }
-
-    const coleccion = collection(FirebaseDB, path);
-
-    const resp = await deleteDoc(doc(coleccion, id));
-    console.log(resp);
-    dispatch(resultadoDeleted());
-    dispatch(onCloseGanadoresForm());
   };
 };

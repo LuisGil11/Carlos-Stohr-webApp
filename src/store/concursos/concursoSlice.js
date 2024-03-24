@@ -38,10 +38,12 @@ export const concursoSlice = createSlice({
 
     addNuevosResultados: (state, { payload }) => {
       state.resultados.push(payload);
+      state.resultados.sort((a, b) => a.edicion - b.edicion);
+      state.isSaving = false;
     },
 
     setResultados: (state, action) => {
-      state.notes = action.payload;
+      state.resultados = action.payload;
     },
 
     setSaving: (state) => {

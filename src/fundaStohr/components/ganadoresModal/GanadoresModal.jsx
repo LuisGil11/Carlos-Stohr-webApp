@@ -60,6 +60,7 @@ export const GanadoresModal = () => {
 
   const onSaveResult = () => {
     dispatch(startSavingResult());
+    onResetForm();
   };
 
   const onChangeConcurso = (event) => {

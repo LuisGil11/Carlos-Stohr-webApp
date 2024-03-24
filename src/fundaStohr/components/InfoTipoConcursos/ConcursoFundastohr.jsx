@@ -5,6 +5,7 @@ import { onOpenGanadoresForm } from "../../../store/concursos/concursoSlice";
 import { GanadoresModal } from "../ganadoresModal/GanadoresModal";
 import { startLoadingResultados } from "../../../store/concursos/thunks";
 import { useEffect } from "react";
+import { TablaResultados } from "../resultados/TablaResultados";
 
 export const ConcursoFundastohr = () => {
   const { resultados } = useSelector((state) => state.concurso);
@@ -196,55 +197,10 @@ export const ConcursoFundastohr = () => {
             Añadir resultados
           </Button>
         </div>
-        <h3
-          className="subtitleLeft"
-          style={{ fontFamily: '"Oswald", sans-serif', color: "#002b5e" }}
-        >
-          2022
-        </h3>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Posición</th>
-              <th>Infantil</th>
-              <th>Juvenil</th>
-              <th>Adulto</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Sandra Jiménez -13 años</td>
-              <td>Yulianngy Rodríguez -19 años</td>
-              <td>Daniela Millán </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Zoe Miranda - 11 años</td>
-              <td>Nicole Labrador - 18 años</td>
-              <td>Darlenys Castillo</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>José Gregorio Muñoz - 13 años</td>
-              <td>Alejandra Franco - 15 años</td>
-              <td>Franco Emilio Valdivieso</td>
-            </tr>
-            <tr>
-              <td>Mención Costumbrista</td>
-              <td>Valentina Chaparro - 11 años</td>
-              <td>Fabiola Figueroa - 18 años</td>
-              <td>Fátima Natera</td>
-            </tr>
-            <tr>
-              <td>Mención Especial</td>
-              <td></td>
-              <td>Susana González - 18 años</td>
-              <td>Eloísa Figueroa</td>
-            </tr>
-          </tbody>
-        </Table>
-        <h1>{resultados}</h1>
+
+        {resultados.map((resultado) => (
+          <TablaResultados key={resultado.id} {...resultado} />
+        ))}
       </div>
       <GanadoresModal />
     </Container>

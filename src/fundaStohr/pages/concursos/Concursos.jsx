@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { pageStyles } from "../styles";
 import Footer from "../../components/Footer";
@@ -15,10 +15,11 @@ import {
   ConcursoTematico,
   ConcursoEnLinea,
 } from "../../components/InfoTipoConcursos";
+import { startLoadingResultados } from "../../../store/concursos/thunks";
 
 export const Concursos = () => {
   const [currentTab, setCurrentTab] = useState("alAireLibre");
-  const { tipoDeConcurso } = useSelector((state) => state.concurso);
+  const { tipoDeConcurso, resultados } = useSelector((state) => state.concurso);
 
   console.log(tipoDeConcurso);
 
@@ -28,6 +29,10 @@ export const Concursos = () => {
     setCurrentTab(id);
     dispatch(onSetTipoDeConcurso(id));
   };
+
+  useEffect(() => {
+    dispatch(startLoadingResultados());
+  }, []);
 
   const handleOpen = () => {
     dispatch(onOpenModal());

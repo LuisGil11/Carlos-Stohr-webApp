@@ -20,22 +20,24 @@ export const startSavingResult = () => {
   return async (dispatch, getState) => {
     dispatch(setSaving());
     const { nuevosResultados, tipoDeConcurso } = getState().concurso;
-    let collectionToSave = null;
+    const { id, subCategoria } = nuevosResultados;
+    let path = "";
+    let newDoc = null;
 
     if (nuevosResultados.subCategoria.trim().length > 0) {
-      collectionToSave = collection(
-        FirebaseDB,
-        `concursos/${tipoDeConcurso}/${nuevosResultados.subCategoria}`
-      );
+      path = `concursos/${tipoDeConcurso}/${subCategoria}`;
     } else {
-      collectionToSave = collection(
-        FirebaseDB,
-        `concursos/${tipoDeConcurso}/${tipoDeConcurso}`
-      );
+      path = `concursos/${tipoDeConcurso}/${tipoDeConcurso}`;
     }
-    const newDoc = doc(collectionToSave, nuevosResultados.edicion.toString());
+    const collectionToSave = collection(FirebaseDB, path);
+    if (id) {
+      newDoc = doc(collectionToSave, nuevosResultados.id.toString());
+      await setDoc(newDoc, nuevosResultados);
+      dispatch(resultadosUpdated(nuevosResultados));
+      return;
+    }
+    newDoc = doc(collectionToSave, nuevosResultados.edicion.toString());
     await setDoc(newDoc, nuevosResultados);
-
     dispatch(
       addNuevosResultados({ ...nuevosResultados, id: nuevosResultados.edicion })
     );

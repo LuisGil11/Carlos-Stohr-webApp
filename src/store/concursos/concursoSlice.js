@@ -104,7 +104,7 @@ export const concursoSlice = createSlice({
     resultadosUpdated: (state, { payload }) => {
       state.isSaving = false;
       state.resultados = state.resultados.map((resultado) => {
-        if (resultado.edicion === payload.edicion) {
+        if (resultado.id === payload.id) {
           return payload;
         }
         return resultado;

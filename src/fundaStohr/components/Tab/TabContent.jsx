@@ -3,16 +3,16 @@ import "./tab.css";
 import { useSelector } from "react-redux";
 
 export const TabContent = ({ title, desccorta, desclarga, imagen, id }) => {
-  const { tipoDeConcurso } = useSelector((state) => state.concurso);
+  const { concursoTab } = useSelector((state) => state.concurso);
 
   return (
     <div
       className={`tab-content animate__animated ${
-        tipoDeConcurso === id ? "animate__fadeIn" : ""
+        concursoTab === id ? "animate__fadeIn" : ""
       }`}
     >
       <div
-        className={`tab-pane ${tipoDeConcurso === id ? "active show" : ""}`}
+        className={`tab-pane ${concursoTab === id ? "active show" : ""}`}
         id={id}
         role="tabpanel"
       >

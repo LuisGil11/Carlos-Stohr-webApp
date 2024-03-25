@@ -11,8 +11,9 @@ import { FirebaseDB } from "../../firebase/config";
 import { loadResultados } from "../../fundaStohr/helpers/loadResultados";
 
 export const startLoadingResultados = () => {
-  return async (dispatch) => {
-    const resultados = await loadResultados();
+  return async (dispatch, getState) => {
+    const { tipoDeConcurso, subCategoria } = getState().concurso;
+    const resultados = await loadResultados({ tipoDeConcurso, subCategoria });
     console.log(resultados);
     dispatch(setResultados(resultados));
   };

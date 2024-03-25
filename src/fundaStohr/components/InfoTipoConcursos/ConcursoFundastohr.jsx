@@ -16,16 +16,6 @@ export const ConcursoFundastohr = () => {
     dispatch(onOpenGanadoresForm());
   };
 
-  const loadResultados = () => {
-    dispatch(startLoadingResultados());
-  };
-
-  // useEffect(() => {
-  //   loadResultados();
-  // }, []);
-
-  // dispatch(startLoadingResultados());
-
   return (
     <Container className="mt-5">
       <FadedTitle title="Concurso Fundastohr" />

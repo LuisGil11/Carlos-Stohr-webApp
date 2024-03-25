@@ -4,6 +4,8 @@ const initialState = {
   isSaving: false,
   isGanadoresFormOpen: false,
   tipoDeConcurso: "fundastohr",
+  concursoTab: "fundastohr",
+  subCategoria: "",
   infoConcurso: null,
   resultados: [],
   nuevosResultados: null,
@@ -49,6 +51,9 @@ export const concursoSlice = createSlice({
   reducers: {
     onSetTipoDeConcurso: (state, { payload }) => {
       state.tipoDeConcurso = payload;
+    },
+    onSetConcursoTab: (state, { payload }) => {
+      state.concursoTab = payload;
     },
 
     onOpenGanadoresForm: (state) => {
@@ -137,4 +142,5 @@ export const {
   resultadosUpdated,
   setResultados,
   onSetFormState,
+  onSetConcursoTab,
 } = concursoSlice.actions;

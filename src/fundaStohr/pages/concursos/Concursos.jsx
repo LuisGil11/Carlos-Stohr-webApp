@@ -7,7 +7,10 @@ import { tiposDeConcursos } from "../../data/infoConcursos";
 import { TabContent } from "../../components/Tab/TabContent";
 import "./concursos.css";
 import { ConcursoModal } from "../../components/nuevoConcursoModal/ConcursoModal";
-import { onSetTipoDeConcurso } from "../../../store/concursos/concursoSlice";
+import {
+  onSetConcursoTab,
+  onSetTipoDeConcurso,
+} from "../../../store/concursos/concursoSlice";
 import { onOpenModal } from "../../../store/ui/uiSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -19,20 +22,21 @@ import { startLoadingResultados } from "../../../store/concursos/thunks";
 
 export const Concursos = () => {
   const [currentTab, setCurrentTab] = useState("alAireLibre");
-  const { tipoDeConcurso, resultados } = useSelector((state) => state.concurso);
-
-  console.log(tipoDeConcurso);
+  const { tipoDeConcurso, subCategoria, concursoTab } = useSelector(
+    (state) => state.concurso
+  );
 
   const dispatch = useDispatch();
 
   const handleTab = (id) => {
     setCurrentTab(id);
+    dispatch(onSetConcursoTab(id));
     dispatch(onSetTipoDeConcurso(id));
   };
 
   useEffect(() => {
     dispatch(startLoadingResultados());
-  }, []);
+  }, [concursoTab]);
 
   const handleOpen = () => {
     dispatch(onOpenModal());
@@ -92,9 +96,9 @@ export const Concursos = () => {
           <Button onClick={handleOpen}>Añadir Concurso</Button>
         </div>
         <ConcursoModal />
-        {tipoDeConcurso === "fundastohr" && <ConcursoFundastohr />}
-        {tipoDeConcurso === "tematico" && <ConcursoTematico />}
-        {tipoDeConcurso === "en-linea" && <ConcursoEnLinea />}
+        {concursoTab === "fundastohr" && <ConcursoFundastohr />}
+        {concursoTab === "tematico" && <ConcursoTematico />}
+        {concursoTab === "en-linea" && <ConcursoEnLinea />}
       </Container>
       <Footer />
     </>

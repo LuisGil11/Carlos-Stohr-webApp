@@ -26,7 +26,7 @@ export const TablaResultados = ({
             {part.split("\n").map((line, i) => (
               <React.Fragment key={i}>
                 {line}
-                <br />
+                {i !== 0 && <br />}
               </React.Fragment>
             ))}
           </span>

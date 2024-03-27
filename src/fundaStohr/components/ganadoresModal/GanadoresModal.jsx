@@ -11,6 +11,8 @@ import {
   startDeletingResult,
   startSavingResult,
 } from "../../../store/concursos/thunks";
+import { ResultadosFundastohr } from "../formularios/ResultadosFundastohr";
+import { ResultadosTematicos } from "../formularios/ResultadosTematico";
 
 export const GanadoresModal = () => {
   const {
@@ -120,197 +122,21 @@ export const GanadoresModal = () => {
               value={edicion}
               name="edicion"
             />
-            <Row>
-              <div className="col-4">
-                <h3 className="d-flex justify-content-center">Infantil</h3>
-                <hr />
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">1ro</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="infantil.primero"
-                    value={infantil.primero}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">2do</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="infantil.segundo"
-                    value={infantil.segundo}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">3ro</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="infantil.tercero"
-                    value={infantil.tercero}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">
-                    Mención Costumbrista
-                  </InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="infantil.costumbrista"
-                    value={infantil.costumbrista}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">
-                    Mención Especial
-                  </InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="infantil.especial"
-                    value={infantil.especial}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-              </div>
-              <div className="col-4">
-                <h3 className="d-flex justify-content-center">Juvenil</h3>
-                <hr />
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">1ro</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="juvenil.primero"
-                    value={juvenil.primero}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">2do</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="juvenil.segundo"
-                    value={juvenil.segundo}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">3ro</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="juvenil.tercero"
-                    value={juvenil.tercero}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">
-                    Mención Costumbrista
-                  </InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="juvenil.costumbrista"
-                    value={juvenil.costumbrista}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">
-                    Mención Especial
-                  </InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="juvenil.especial"
-                    value={juvenil.especial}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-              </div>
-              <div className="col-4">
-                <h3 className="d-flex justify-content-center">Adulto</h3>
-                <hr />
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">1ro</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="adulto.primero"
-                    value={adulto.primero}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">2do</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="adulto.segundo"
-                    value={adulto.segundo}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">3ro</InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="adulto.tercero"
-                    value={adulto.tercero}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">
-                    Mención Costumbrista
-                  </InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="adulto.costumbrista"
-                    value={adulto.costumbrista}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">
-                    Mención Especial
-                  </InputGroup.Text>
-                  <Form.Control
-                    placeholder="nombre"
-                    aria-label="nombre"
-                    aria-describedby="basic-addon1"
-                    name="adulto.especial"
-                    value={adulto.especial}
-                    onChange={onInputChange}
-                  />
-                </InputGroup>
-              </div>
-            </Row>
+            {tipoDeConcurso === "tematico" ? (
+              <ResultadosTematicos
+                infantil={infantil}
+                juvenil={juvenil}
+                adulto={adulto}
+                onInputChange={onInputChange}
+              />
+            ) : (
+              <ResultadosFundastohr
+                infantil={infantil}
+                juvenil={juvenil}
+                adulto={adulto}
+                onInputChange={onInputChange}
+              />
+            )}
           </Form.Group>
         </Form>
       </Modal.Body>
